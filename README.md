@@ -2,4 +2,3 @@
 
 Nuestro proyecto consiste en una página web para gestionar turnos y ver información sobre médicos y pacientes.
 
-(Agrego este cambio para pushear la rama `r-sofi`, borrar después).
