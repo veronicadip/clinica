@@ -1,0 +1,17 @@
+@media screen and (max-width: 991px) {
+    .offCanvasStyles {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center !important;
+    };
+};
+
+.carousel-inner {
+    max-height: 700px;
+}
+
+img {
+    max-height: 700px;
+    object-fit: cover;
+}
+    
