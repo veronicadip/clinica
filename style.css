@@ -3,6 +3,14 @@ body {
     background-image: radial-gradient(circle, #f2f6f7, #eaedee, #e2e5e5, #dadcdd, #d2d4d4, #c5cfd0, #b8cbcb, #aac6c7, #92c4c6, #76c1c6, #52bfc6, #00bcc6) !important;
 }
 
+/* BOTONES HEADER */
+.hoverBoton:hover {
+    background-color: #434947 !important;
+}
+.hoverBoton:active {
+    background-color: #202322 !important;
+}
+
 /* SOBRE NOSOTRAS */
 .container {
   position: relative;
@@ -83,9 +91,50 @@ body {
     max-height: 700px;
 }
 
-img {
+.fotoCarousel {
     max-height: 700px;
     object-fit: cover;
+}
+
+/*ICONOS*/
+footer{
+    background-color: black;
+    min-height: 10px;
+}
+.footer-logo{
+    height: 60px;
+    width: 350px;
+    margin:30px;
+}
+.iconos-redes-sociales a{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+    margin: 20px;
+    border:2px solid white;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+}
+.iconos-redes-sociales i{
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+}
+.iconos-redes-sociales a:hover {
+    background-color: white;
+    border: 2px solid cyan;
+}
+
+.iconos-redes-sociales a:hover i{
+    color: black;
+}
+.derechos-de-autor{
+    font-size: 15px;
+    color:white;
+    text-decoration: none;
 }
 
 /* MEDIA QUERY */
@@ -109,6 +158,3 @@ img {
         justify-content: center !important;
     };
 };
-
-
-    
