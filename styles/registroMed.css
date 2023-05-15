@@ -1,7 +1,4 @@
-*{
-    margin: 0.2vw;
-    padding: 0.1vw;
-}
+
 body{
     background-image: radial-gradient(circle, #f2f6f7, #eaedee, #e2e5e5, #dadcdd, #d2d4d4, #c5cfd0, #b8cbcb, #aac6c7, #92c4c6, #76c1c6, #52bfc6, #00bcc6);
 }
@@ -57,7 +54,7 @@ label{
     justify-content: center;
 }
 .imagen{
-    margin-top: 2vw;
+    margin-top: 0.5vw;
 }
 .fotoform{
     margin-top: 5vw;
@@ -72,9 +69,11 @@ input:hover{
     .padreCol{
         display: flex;
         width: auto;
+        margin:4vw;
     }
     .col1{
         width: 65vw;
+        margin-left: 6vw;
     }
     label{
         font-size: 4vw;
@@ -86,5 +85,16 @@ input:hover{
         display: flex;
         justify-content: center;
         margin-left: 3vw;
+    }
+}
+@media screen and (max-width: 991px) {
+    .dropdownStyles {
+        margin-left: 0.5rem !important;
+        margin-top: 0.5rem !important;
+    }
+    .offCanvasStyles {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center !important;
     }
 }
