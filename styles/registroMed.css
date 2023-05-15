@@ -22,6 +22,7 @@ h3{
  display: flex;
  flex-direction: column;
  margin: 1vw;
+ padding: 1vw;
  width: 35vw;
 }
 
