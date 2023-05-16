@@ -1,0 +1,53 @@
+body { background: radial-gradient(circle, #f2f6f7, #eaedee, #e2e5e5, #dadcdd, #d2d4d4, #c5cfd0, #b8cbcb, #aac6c7, #92c4c6, #76c1c6, #52bfc6, #00bcc6);}
+nav {background-color: #127078;}
+footer {background-color: #127078;}
+
+nav button {background-color: #383d3b;}
+
+.botonColor{
+    background-color:#127078;
+    color: white;
+}
+.botonColor:hover{
+    background-color:#03545c  ;
+    color: white;
+}
+
+.horario{
+    background-color:#127078; 
+    border: none; 
+    color: white; 
+    border-radius: 5px ;
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    padding-top:2px ;
+    text-decoration: none; 
+    margin-left:10px ;
+    box-shadow: 2px 2px 4px #f2f6f7;
+}
+@media screen and (min-width: 768px) {
+    .horario {
+        width: 130px;
+        height: 40px;
+        padding-top: 7px;
+    }
+    .horario:hover{
+        width: 135px;
+        height: 43px;
+        background-color:#03545c ;
+    }
+}
+@media screen and (min-width: 1025px) {
+    .horario {
+        width: 200px;
+        height: 40px;
+        padding-top: 7px;
+        margin-left: 15px;
+    }
+    .horario:hover{
+        width: 205px;
+        height: 43px;
+        background-color:#03545c ;
+    }
+}
