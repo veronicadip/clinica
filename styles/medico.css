@@ -1,0 +1,54 @@
+*{
+    margin: 0vw;
+    padding: 0vw;
+}
+body{
+    background-image: radial-gradient(circle, #f2f6f7, #eaedee, #e2e5e5, #dadcdd, #d2d4d4, #c5cfd0, #b8cbcb, #aac6c7, #92c4c6, #76c1c6, #52bfc6, #00bcc6);
+}
+
+
+/*h1{
+    padding: 1vw;
+    margin-left: 11vw;
+    font-family: 'Noto Sans Cham', sans-serif;
+    font-size:xx-large;
+    justify-content: center;
+
+    }
+
+    h2{
+        padding: 1vw;
+        margin-left: 11vw;
+        font-family: 'Noto Sans Cham', sans-serif;
+        font-size:xx-large;
+        justify-content: center;
+    }
+
+    h3{
+        padding: 1vw;
+        margin-left: 11vw;
+        font-family: 'Noto Sans Cham', sans-serif;
+        font-size:xx-large;
+        justify-content: center;
+    }*/
+
+    
+/* MEDIA QUERY */
+@media screen and (max-width: 991px) {
+    .dropdownStyles {
+        margin-left: 0.5rem !important;
+        margin-top: 0.5rem !important;
+    }
+    .offCanvasStyles {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center !important;
+    };
+};
+
+/*.container{
+    justify-content: center;
+    width: 800px;
+    margin: 90px auto;
+}
+
