@@ -42,16 +42,22 @@ h3{
     flex-direction: column;
     justify-content:center;
 }
+.avatars{
+    border-radius: 10vw;
+    margin-right: 4vw;
+    margin-top:1vw
+}
 #oSocial{
     display: flex;
     flex-direction: column;
     justify-content:center;
 }
 .enviar{
-    display: flex;
-    flex-direction: column;
-    margin-left: 5vw; 
-    margin-right: 5vw;
+     display: flex;
+    flex-direction: column; 
+    margin-left: 2vw; 
+    width: 25vw;
+   
 }
 label{
     font-weight: bold;
@@ -64,7 +70,7 @@ label{
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+} 
 .imagen{
     margin-top: 0.5vw;
 }
@@ -145,7 +151,7 @@ footer{
     .enviar{
         display: flex;
         justify-content: center;
-        margin-left: 3vw;
+        margin-left: 22vw;
     }
 }
 @media screen and (max-width: 991px) {
