@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     aIniciarSesion.remove();
     botonRegistro.remove();
     if (avatar === avatarDoctora) {
+      //
     }
   }
 });
