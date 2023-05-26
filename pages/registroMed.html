@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Cham:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/styles/registroMed.css">
     <title>Registro Medico</title>
 </head>
@@ -19,7 +20,7 @@
           <div class="container-fluid ">
               <!-- LOGO -->
               <a class="navbar-brand" href="./index.html">
-                  <img src="../assets/logo.png" alt="Logo de la clínica" height="60" width="60" class="mx-5">
+                  <img src="../assets/logo/logo.png" alt="Logo de la clínica" height="60" width="60" class="mx-5">
               </a>
               <!-- BOTON TOGGLER -->
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
@@ -35,18 +36,18 @@
                       <!-- BUSCADOR -->
                       <div class="container-fluid">
                           <form class="d-flex" role="search">
-                              <input class="form-control my-3" type="search" placeholder="Buscar" aria-label="Search">
+                              <input class="form-control my-3 buscador" type="search" placeholder="Buscar" aria-label="Search">
                           </form>
                       </div>
                       <!-- BOTONES -->
-                      <button type="button" class="btn btn-dark ms-2 me-2 my-3" style="background-color: #383D3B">
+                      <button type="button" class="btn btn-dark ms-2 me-2 my-3 hoverBoton" style="background-color: #383D3B">
                           <a class="nav-link active" aria-current="page" href="./pages/contacto.html">Contacto</a>
                       </button>
-                      <button type="button" class="btn btn-dark ms-2 me-2 my-3 " style="background-color: #383D3B">
+                      <button type="button" class="btn btn-dark ms-2 me-2 my-3 hoverBoton " style="background-color: #383D3B">
                           <a class="nav-link active text-nowrap" aria-current="page" href="./pages/iniciar-sesion.html">Iniciar sesion</a>
                       </button>
                       <div class="dropdown me-3">
-                          <button class="btn btn-dark dropdown-toggle ms-2 mt-3 w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                          <button class="btn btn-dark dropdown-toggle ms-2 mt-3 w-100 hoverBoton" type="button" data-bs-toggle="dropdown" aria-expanded="false"
                               style="background-color: #383D3B">
                               Registrarse
                           </button>
@@ -75,72 +76,80 @@
               
               <label for="form-control">Nombre </label>
 
-                <input class="form-control" type="text" placeholder="Nombre y apellido" aria-label="default input example" required>
+                <input class="form-control" type="text" placeholder="Nombre y apellido" aria-label="default input example" id="nombremedico" required>
                 
                 
                 <label for="floatingInput">E-mail</label>
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <input type="email" class="form-control" placeholder="name@example.com" id="email" required>
                     
                   
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                <div>
+                  <label for="constrasena" class="form-label">Contraseña</label>
                   <input type="password" class="form-control" 
-                 id="exampleInputPassword1"required>
+                 id="contrasena" required>
                 </div>
 
-                
-
-      
       <label for="form-control">Telefono</label>
-      <input class="form-control" type="number" placeholder="Numero de telefono" aria-label="default input example"required>
+      <input class="form-control" type="text" placeholder="Numero de telefono" aria-label="default input example" id="telefono"required>
 
-      <label for="floatingSelect">Elige tu</label>
+      <label for="especialidad">Elige tu</label>
       <div class="form-floating">
-          <select class="form-select-sm" id="floatingSelect" aria-label="Floating label select example"required>
+          <select class="form-select-sm"  aria-label="Floating label select example" id="especialidad" required>
             <option selected>Especialidad</option>
-            <option value="1">Cardiologia</option>
-            <option value="2">Nutricion</option>
-            <option value="3">Psicologia</option>
-            <option value="4">Endocrinologia</option>
-            <option value="5">Pediatria</option>
-            <option value="6">Odontologia</option>
-            <option value="6">Otra</option>
+            <option value="Cardiologia">Cardiologia</option>
+            <option value="Nutricion">Nutricion</option>
+            <option value="Psicologia">Psicologia</option>
+            <option value="Endocrinologia">Endocrinologia</option>
+            <option value="Pediatria">Pediatria</option>
+            <option value="Odontologia">Odontologia</option>
+            <option value="Otra">Otra</option>
           </select>
          
       </div>
 
                  
-                    <label for=="basic-addon1">N° ID Medico</label>
+                    <!-- <label for=="idmedico">N° ID Medico</label>
                      <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">@</span>
-                    <input type="text" class="form-control" placeholder="ID medico"  aria-describedby="basic-addon1"required>
-                  </div>
+                    <input type="text" class="form-control" placeholder="ID medico"  aria-describedby="basic-addon1" id="idmedico" required>
+                  </div> -->
                              
-                  <div class="pie">
-                    <div class="avatar">
-                      <label for="inputGroupFile02">Foto de perfil</label>
+                <div class="pie">
+                    <div class="form-check-inline"><label for="avatar"> Elige tu avatar</label><br>
+                      <!-- <label for="foto">Foto de perfil</label>
                         <img src="" class="rounded float-start" alt="AvatarMedico">
-                        <input type="file" class="form-control" id="inputGroupFile02" required></input>
+                        <input type="file" class="form-control" id="foto" required></input> -->
+                        <div class="avatars">
+                        <label class="radio-label">
+                            <input type="radio" name="avatar" class="form-check-input" value="imagenVaron.jpg">
+                            <img class="avatars" src="../assets/FormsRegistros/Avatars/AvatarVaron.png" alt="Imagen varon"width="110" height="150">
+                        </label>
+                         
+                        <label class="radio-label">
+                            <input type="radio" class="form-check-input" name="avatar" value="imagenMujer.jpg">
+                            <img class="avatars" src="../assets/FormsRegistros/Avatars/AvatarMujer.png" alt="Imagen mujer" width="100" height="150">
+                        </label>
+                        </div>
                    </div>
-                  
-                   <div class="oSocial">
-                      <div class="form-check form-check-inline"  required>
-                        <label>Recibe obra social?</label><br>
-                        <label class="form-check-label" for="inlineRadio1"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                       SI</label>
-                      </div>
+    
+                   <div class="oSocial mb-3">
+                      <div class="form-check form-check-inline" >
+                        <label for="osocial">Recibe obra social?</label><br>
+                        <input class="form-check-input" type="radio"   name="recibeOS" value="si">
+                        <label class="form-check-label" for="inlineRadio1">SI</label>
+                       </div>
                       <div class="form-check form-check-inline">
-                        <label class="form-check-label" for="inlineRadio2"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"  value="option2">
-                       NO</label>
+                        <input class="form-check-input" type="radio"  name="recibeOS" value="no">
+                        <label class="form-check-label" for="inlineRadio2">NO</label>
                       </div>
                     </div>
                      
                     
-     </div>
-     <div class="enviar">
+                </div>
+    <div class="enviar">    
         <br><br>
-         <label class="form-check-label" for="exampleCheck1"> <input type="checkbox" class="form-check-input" id="exampleCheck1">Recordarme</label><br>
-         <button type="submit" class="btn btn-dark">Enviar registro</button>
+        <!-- <label class="form-check-label" for="exampleCheck1"> <input type="checkbox" class="form-check-input" id="exampleCheck1">Recordarme</label><br> -->
+        <button type="submit" class="btn btn-dark" onclick= "guardarDatos()" >Enviar registro</button>
         </div>
     </div>
         <div class="col2">
@@ -148,17 +157,46 @@
             <img class="fotoform" src="../assets/FormsRegistros/foto medicos2.png" alt="" width="auto" height="auto">
           </div>
        </div>
-    
-
+      
+       
   
    </div>
   
   
 </form>
     </main>
-    <footer>
-        Derechos  reservados
+     <!-- FOOTER -->
+     <footer class="bg-dark text-center text-white mt-5">
+        <!-- SOCIAL MEDIA -->
+        <div class="container p-3 pb-0">
+            <div>
+                <div class="d-flex justify-content-center container-fluid ">
+                    <div class="iconos-redes-sociales d-flex flex-wrap  justify-content-center">
+                        <a href="./Error404.html" rel="noopener noreferrer">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="./Error404.html" rel="noopener noreferrer">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="./Error404.html" rel="noopener noreferrer">
+                            <i class="bi bi-envelope"></i>
+                        </a>
+                        <a href="./Error404.html" rel="noopener noreferrer">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <p>Direccion: General Paz 576, San miguel de Tucuman. | Telefono: (0381) 5954001</p>
+            </div>
+        </div>
+        <!-- COPYRIGHT -->
+        <div class="text-center p-3" style="background-color:#00000033;">
+            © 2023 RollingCode
+        </div>
+
+        <script src="../scripts/registroMed.js"></script>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="scripts/formMed.js"></script>
 </body>
 </html>
