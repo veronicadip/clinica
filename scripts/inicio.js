@@ -31,20 +31,19 @@ const usuario3 = {
   avatar: "avatarDoctor",
 };
 
-// const botonIniciarSesion = document.getElementById("botonIniciarSesion");
-// const aIniciarSesion = document.getElementById("aIniciarSesion");
-// const botonRegistro = document.getElementById("botonRegistro");
+const botonIniciarSesion = document.getElementById("botonIniciarSesion");
+const aIniciarSesion = document.getElementById("aIniciarSesion");
+const botonRegistro = document.getElementById("botonRegistro");
 
-// let usuarioLoggeado = usuario1;
+let usuarioLoggeado = usuario1;
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   if (localStorage.nombremedico !== undefined) {
-//     const avatar = localStorage.avatar.value;
-//     botonIniciarSesion.remove();
-//     aIniciarSesion.remove();
-//     botonRegistro.remove();
-//     if (avatar === avatarDoctora) {
-
-//     }
-//   }
-// });
+document.addEventListener("DOMContentLoaded", () => {
+  if (localStorage.nombremedico !== undefined) {
+    const avatar = localStorage.avatar.value;
+    botonIniciarSesion.remove();
+    aIniciarSesion.remove();
+    botonRegistro.remove();
+    if (avatar === avatarDoctora) {
+    }
+  }
+});
