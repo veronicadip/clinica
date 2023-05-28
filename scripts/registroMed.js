@@ -5,10 +5,8 @@ function guardarDatos() {
     localStorage.contrasena = document.getElementById(`contrasena`).value;
     localStorage.telefono = document.getElementById(`telefono`).value;
     localStorage.especialidad = document.getElementById(`especialidad`).value;
-    localStorage.idmedico = document.getElementById(`idmedico`).value;
-    localStorage.avatar = document.querySelector(`input[name="avatar"]:checked`).value;
+    localStorage.imagenavatar = document.querySelector(`input[name="imagenavatar"]:checked`).value;
     localStorage.recibeOS = document.querySelector(`input[name="recibeOS"]:checked`).value;
-  
 }
 
 
@@ -16,8 +14,8 @@ function guardarDatos() {
 // let medicos = (nombremedico,email,contrasena,telefono,especialidad,idmedico,foto,recibeOS)
 
 // recuperarRegistro = () => {
-      let nombre= localStorage.getItem(`nombremedico`);
-      console.log(nombre);
+      let nombremedico= localStorage.getItem(`nombremedico`);
+      console.log(nombremedico);
 
       let email= localStorage.getItem(`email`);
       console.log(email);
@@ -31,11 +29,11 @@ function guardarDatos() {
       let especialidad= localStorage.getItem(`especialidad`);
       console.log(especialidad);
 
-      let id= localStorage.getItem(`idmedico`);
-      console.log(id);
+    //   let id= localStorage.getItem(`idmedico`);
+    //   console.log(id);
 
-      let avatar= localStorage.getItem(`avatar`);
-      console.log(avatar);
+      let avatars= localStorage.getItem(`imagenavatar`);
+      console.log(avatars);
 
       let oSocial= localStorage.getItem(`recibeOS`);
       console.log(oSocial);
