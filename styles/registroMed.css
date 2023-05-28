@@ -43,10 +43,12 @@ h3{
     justify-content:center;
 }
 .avatars{
-    border-radius: 10vw;
+    display: flex;
+    flex-direction: row;
+    width: 9vw;
     margin-right: 4vw;
     margin-top:1vw
-}
+} 
 #oSocial{
     display: flex;
     flex-direction: column;
