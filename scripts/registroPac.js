@@ -28,8 +28,7 @@ localStorage.getItem(`cualOS`);
       }
       console.log(typeof datos);
 
-
-
+      
     //   let nombre= localStorage.getItem(`nombrepaciente`);
     //   console.log(nombre);
 

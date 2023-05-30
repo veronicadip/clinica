@@ -55,47 +55,7 @@ localStorage.getItem(`imagenavatar`);
       // let oSocial= localStorage.getItem(`recibeOS`);
       // console.log(oSocial);
 
-
-    //    let datos = JSON.parse(nombremedico, email,contrasena,telefono,especialidad,idmedico,foto,recibeOS)
-    //    console.log(datos);
-    //    console.log(typeof(datos))
      
-    //  console.log(datos)
-    //   let registrados (nombre,email,contraseña,telefono,especialidad,id,foto,oSocial) = {
-
-// let medicos = []
-
-// let registrados = {
-//     nombre: `${nombre}`,
-//     email: `${nombre}`,
-//     contraseña: `${contraseña}`,
-//     telefono: `${telefono}`,
-//     especialidad: `${especialidad}`,
-//     idmedico: `${idmedico}`,
-//     foto: `${foto}`,
-//     oSocial: `${recibeOS}`,
-
-// }
-
-// registrados.push(medicos)
-    
-
-// medicos.push(registrados)
+  
 
 
-// function recuperarDatos(){
-//     if (localStorage.nombre =! undefined){
-//         document.getElementById(`datos`).innerHTML= 
-//         `<p>nombre: ${localStorage.nombremedico}</p>` 
-//         `<p>email: ${localStorage.email}</p>`
-//         `<p>constraseña: ${localStorage.constraseña}</p>`
-//         `<p> telefono: ${localStorage.telefono}</p>`
-//         `<p>nombre: ${localStorage.especialidad}</p>`
-//         `<p>especialidad: ${localStorage.idmedico}</p>`
-//         `<p>idmedico: ${localStorage.idmedico}</p>`
-//         `<p>foto: ${localStorage.foto}</p>`
-//         `<p>recibeOS: ${localStorage.recibeOS}</p>`
-//     } else{
-
-//     }
-// }
