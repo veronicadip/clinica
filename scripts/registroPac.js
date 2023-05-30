@@ -8,27 +8,47 @@ function guardarDatos() {
     localStorage.tieneOS = document.querySelector(`input[name="tieneOS"]:checked`).value;
     localStorage.cualOS = document.getElementById(`cualOS`).value;
 }
+let contenedor1 = 
+localStorage.getItem(`nombrepaciente`);
 
-      let nombre= localStorage.getItem(`nombrepaciente`);
-      console.log(nombre);
+ let contenedor2=
+localStorage.getItem(`telefono`);
 
-      let telefono= localStorage.getItem(`telefono`);
-      console.log(telefono)
+ let contenedor3=
+localStorage.getItem(`tieneOS`);
 
-      let documento= localStorage.getItem(`documento`);
-      console.log(documento);
+ let contenedor4=
+localStorage.getItem(`cualOS`);
 
-      let email= localStorage.getItem(`email`);
-      console.log(email);
+      let datos = {
+       nombrepaciente: `${contenedor1}`,
+       telefono:  ` ${contenedor2}` ,
+       tieneOS: ` ${contenedor3}`,
+       cualOS:  ` ${contenedor4}`,
+      }
+      console.log(typeof datos);
 
-      let contraseña= localStorage.getItem(`contrasena`);
-      console.log(contraseña);
+      
+    //   let nombre= localStorage.getItem(`nombrepaciente`);
+    //   console.log(nombre);
 
-      let tieneOS= localStorage.getItem(`tieneOS`);
-      console.log(tieneOS);
+    //   let telefono= localStorage.getItem(`telefono`);
+    //   console.log(telefono)
 
-      let cualOS= localStorage.getItem(`cualOS`);
-      console.log(cualOS);
+    //   let documento= localStorage.getItem(`documento`);
+    //   console.log(documento);
+
+    //   let email= localStorage.getItem(`email`);
+    //   console.log(email);
+
+    //   let contraseña= localStorage.getItem(`contrasena`);
+    //   console.log(contraseña);
+
+    //   let tieneOS= localStorage.getItem(`tieneOS`);
+    //   console.log(tieneOS);
+
+    //   let cualOS= localStorage.getItem(`cualOS`);
+    //   console.log(cualOS);
 
 
       

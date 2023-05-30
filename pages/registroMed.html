@@ -74,34 +74,36 @@
      <div class="col1">
              <form >
               
-              <label for="form-control">Nombre </label>
+                 <label for="form-control">Nombre </label>
 
-                <input class="form-control" type="text" placeholder="Nombre y apellido" aria-label="default input example" id="nombremedico" required>
+                 <input class="form-control" type="text" placeholder="Nombre y apellido" aria-label="default input example" id="nombremedico" required>
                 
                 
-                <label for="floatingInput">E-mail</label>
-                    <input type="email" class="form-control" placeholder="name@example.com" id="email" required>
+                  <label for="floatingInput">E-mail</label>
+                  <input type="email" class="form-control" placeholder="name@example.com" id="email" required>
                     
+                  <label for="form-control">ID medico </label>
+                  <input class="form-control" type="text" placeholder="ID medico" aria-label="default input example" id="idmedico" required>    
                   
-                <div>
-                  <label for="constrasena" class="form-label">Contraseña</label>
-                  <input type="password" class="form-control" 
-                 id="contrasena" required>
-                </div>
+                  <label for="constrasena">Contraseña</label>
+                  <input type="password" class="form-control" placeholder="Contraseña" aria-label="default input example" id="contrasena" required>
+                
 
-      <label for="form-control">Telefono</label>
-      <input class="form-control" type="text" placeholder="Numero de telefono" aria-label="default input example" id="telefono"required>
+                 <label for="form-control">Telefono</label>
+                 <input class="form-control" type="text" placeholder="Numero de telefono" aria-label="default input example" id="telefono"required>
 
       <label for="especialidad">Elige tu</label>
       <div class="form-floating">
           <select class="form-select-sm"  aria-label="Floating label select example" id="especialidad" required>
             <option selected>Especialidad</option>
             <option value="Cardiologia">Cardiologia</option>
-            <option value="Nutricion">Nutricion</option>
-            <option value="Psicologia">Psicologia</option>
-            <option value="Endocrinologia">Endocrinologia</option>
+            <option value="Cirugía general">Cirugía general</option>
+            <option value="Radiología">Radiología</option>
+            <option value="Neumología">Neumología</option>
             <option value="Pediatria">Pediatria</option>
-            <option value="Odontologia">Odontologia</option>
+            <option value="Gastroenterologia">Gastroenterologia</option>
+            <option value="Obstetricia">Obstetricia</option>
+            <option value="Ecografia">Ecografia</option>
             <option value="Otra">Otra</option>
           </select>
          
@@ -122,12 +124,12 @@
                         <div class="avatars">
                         <label class="radio-label">
                             <input type="radio" name="imagenavatar" class="form-check-input" value="imagenVaron.jpg">
-                            <img class="avatars rounded-circle"  src="../assets/FormsRegistros/Avatars/AvatarVaron.png" alt="Imagen varon"  >
+                            <img class="avatars rounded-circle"  src="../assets/img/doc$.jpg" alt="Imagen varon"  >
                         </label>
                          
                         <label class="radio-label">
                             <input type="radio" class="form-check-input" name="imagenavatar" value="imagenMujer.jpg">
-                            <img class="avatars rounded-circle"  src="../assets/FormsRegistros/Avatars/AvatarMujer.png" alt="Imagen mujer"  >
+                            <img class="avatars rounded-circle"  src="../assets/img/doc1.jpg" alt="Imagen mujer"  >
                         </label>
                         </div>
                    </div>
@@ -149,7 +151,7 @@
     <div class="enviar">    
         <br><br>
         <!-- <label class="form-check-label" for="exampleCheck1"> <input type="checkbox" class="form-check-input" id="exampleCheck1">Recordarme</label><br> -->
-        <button type="submit" class="btn btn-dark" onclick= "guardarDatos()" >Enviar registro</button>
+        <button type="submit" class="btn btn-dark" onclick= "almacenarDatos()" >Enviar registro</button>
         </div>
     </div>
         <div class="col2">
