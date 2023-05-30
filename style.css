@@ -138,6 +138,13 @@ footer{
 }
 
 /* MEDIA QUERY */
+@media screen and (max-width: 460px) {
+  .box {
+     margin-left: 0% !important;
+     margin-right: 0% !important;
+   }
+ }
+
 @media (max-width: 600px) {
   .container .box:hover .contenido {
     transform: translate(0, 3.5rem);
@@ -159,8 +166,3 @@ footer{
     };
 };
 
-@media screen and (max-width: 460px) {
- .container .box {
-    margin: 0%;
-  }
-}
