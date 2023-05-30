@@ -1,39 +1,3 @@
-if (!localStorage.getItem("datos")) {
-  localStorage.setItem("datos", JSON.stringify({}));
-}
-
-function guardarDatos() {
-  let contenedornombrePaciente =
-    document.getElementById(`nombrepaciente`).value;
-  let contenedorEmail = document.getElementById(`email`).value;
-  let contenedorDocumento = document.getElementById(`documento`).value;
-  let contenedorContrasena = document.getElementById(`contrasena`).value;
-  let contenedorTelefono = document.getElementById(`telefono`).value;
-  let contenedorCualOS = document.getElementById(`cualOS`).value;
-  let contenedorTieneOS = document.querySelector(
-    `input[name="tieneOS"]:checked`
-  ).value;
-
-  // deserializar la informacion
-  const datos = JSON.parse(localStorage.datos);
-  // manipular la informacion
-  datos[contenedorEmail] = {
-    nombrepaciente: contenedornombrePaciente,
-    email: contenedorEmail,
-    documento: contenedorDocumento,
-    contrasena: contenedorContrasena,
-    telefono: contenedorTelefono,
-    especialidad: contenedorEspecialidad,
-    TieneOS: contenedorTieneOS,
-    CualOS: contenedorCualOS,
-  };
-  // serializar y guardar la informacion
-  localStorage.datos = JSON.stringify(datos);
-
-  // te manda al inicio una vez que llenas el formulario
-  window.location.href = "../index.html";
-}
-
 // function guardarDatos() {
 
 //     localStorage.nombrepaciente = document.getElementById(`nombrepaciente`).value;
@@ -56,32 +20,46 @@ function guardarDatos() {
 //  let contenedor4=
 // localStorage.getItem(`cualOS`);
 
-//       let datos = {
-//        nombrepaciente: `${contenedor1}`,
-//        telefono:  ` ${contenedor2}` ,
-//        tieneOS: ` ${contenedor3}`,
-//        cualOS:  ` ${contenedor4}`,
-//       }
-//       console.log(typeof datos);
-// ----------------------------------------------------------------------------
+// let datos = {
+//   nombrepaciente: `${contenedor1}`,
+//   telefono:  ` ${contenedor2}` ,
+//   tieneOS: ` ${contenedor3}`,
+//   cualOS:  ` ${contenedor4}`,
+//  }
+//  console.log(typeof datos);
 
-//   let nombre= localStorage.getItem(`nombrepaciente`);
-//   console.log(nombre);
+// define datos
+if (!localStorage.getItem("datos")) {
+  localStorage.setItem("datos", JSON.stringify({}));
+}
 
-//   let telefono= localStorage.getItem(`telefono`);
-//   console.log(telefono)
+function guardarDatos() {
+  let contenedornombrePaciente =
+    document.getElementById(`nombrepaciente`).value;
+  let contenedorEmail = document.getElementById(`email`).value;
+  let contenedorTelefono = document.getElementById(`telefono`).value;
+  let contenedorContrasena = document.getElementById(`contrasena`).value;
+  let contenedorDocumento = document.getElementById(`documento`).value;
+  let contenedorTieneOS = document.querySelector(
+    `input[name="tieneOS"]:checked`
+  ).value;
+  let contenedorCualOS = document.getElementById(`cualOS`).value;
 
-//   let documento= localStorage.getItem(`documento`);
-//   console.log(documento);
+  // deserializar la informacion
+  const datos = JSON.parse(localStorage.datos);
+  // manipular la informacion
+  datos[contenedorEmail] = {
+    nombrepaciente: contenedornombrePaciente,
+    email: contenedorEmail,
+    telefono: contenedorTelefono,
+    contrasena: contenedorContrasena,
+    documento: contenedorDocumento,
+    TieneOS: contenedorTieneOS,
+    CualOS: contenedorCualOS,
+  };
+  // serializar y guardar la informacion
+  localStorage.datos = JSON.stringify(datos);
 
-//   let email= localStorage.getItem(`email`);
-//   console.log(email);
-
-//   let contraseña= localStorage.getItem(`contrasena`);
-//   console.log(contraseña);
-
-//   let tieneOS= localStorage.getItem(`tieneOS`);
-//   console.log(tieneOS);
-
-//   let cualOS= localStorage.getItem(`cualOS`);
-//   console.log(cualOS);
+  // te manda al inicio una vez que llenas el formulario
+  window.location.href = "../index.html";
+}
