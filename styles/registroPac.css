@@ -118,7 +118,7 @@ footer{
     text-decoration: none;
 }
 /*MEDIA QUERY*/
-@media(max-width: 800px){
+@media(max-width: 1368px){
     .padreCol{
         display: flex;
         width: auto;
