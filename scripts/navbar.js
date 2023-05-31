@@ -25,10 +25,6 @@ const alertModal = document.getElementById("alertModal");
 let emailIngresado;
 let contrasenaIngresada;
 
-if (!localStorage.usuarioLoggeado) {
-  localStorage.setItem("usuarioLoggeado", "nadie-loggeado");
-}
-
 formModal.addEventListener("submit", (e) => {
   e.preventDefault();
   emailIngresado = e.currentTarget[0].value;
@@ -61,7 +57,7 @@ const botonContacto = document.getElementById("botonContacto");
 const aContacto = document.getElementById("aContacto");
 const displayAvatar = document.getElementById("displayAvatar");
 let datosUsuarioLoggeado;
-if (localStorage.usuarioLoggeado !== "nadie-loggeado") {
+if (localStorage.usuarioLoggeado) {
   datosUsuarioLoggeado = JSON.parse(localStorage.getItem("datos"))[
     localStorage.usuarioLoggeado
   ];
@@ -69,8 +65,8 @@ if (localStorage.usuarioLoggeado !== "nadie-loggeado") {
 
 document.addEventListener("DOMContentLoaded", () => {
   // SETEAR USUARIO NO LOGGEADO
-  if (localStorage.usuarioLoggeado === "nadie-loggeado") {
-    return null;
+  if (!localStorage.usuarioLoggeado) {
+    return;
     // SETEAR MEDICO
   } else if (datosUsuarioLoggeado.nombremedico !== undefined) {
     spanIniciarSesion.remove();
