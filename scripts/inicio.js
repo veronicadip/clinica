@@ -66,18 +66,18 @@ if (localStorage.usuarioLoggeado) {
 document.addEventListener("DOMContentLoaded", () => {
   // SETEAR USUARIO NO LOGGEADO
   if (!localStorage.usuarioLoggeado) {
-    return null;
+    return;
     // SETEAR MEDICO
   } else if (datosUsuarioLoggeado.nombremedico !== undefined) {
     spanIniciarSesion.remove();
     botonRegistro.remove();
     displayAvatar.classList.add("d-flex");
-    botonIniciarSesion.innerHTML += `<a class="nav-link active text-nowrap" aria-current="page" href="./pages/medico.html" id="aTurnosMedico">Mis Turnos</a>`;
+    botonIniciarSesion.innerHTML += `<a class="nav-link active text-nowrap" aria-current="page" href="/pages/medico.html" id="aTurnosMedico">Mis Turnos</a>`;
     if (datosUsuarioLoggeado.imagenAvatar === "imagenMujer.jpg") {
-      displayAvatar.innerHTML += `<img src="./assets/img/doc1.jpg" alt="Foto de perfil de la doctora ${datosUsuarioLoggeado.nombremedico}" 
+      displayAvatar.innerHTML += `<img src="/assets/img/doc1.jpg" alt="Foto de perfil de la doctora ${datosUsuarioLoggeado.nombremedico}" 
       class="w-25 rounded-circle mt-1 ms-4"> <p class="mt-4 ms-3 fw-bold">${datosUsuarioLoggeado.nombremedico}</p>`;
     } else if (datosUsuarioLoggeado.imagenAvatar === "imagenVaron.jpg") {
-      displayAvatar.innerHTML += `<img src="./assets/img/doc$.jpg" alt="Foto de perfil del doctor ${datosUsuarioLoggeado.nombremedico}" 
+      displayAvatar.innerHTML += `<img src="/assets/img/doc$.jpg" alt="Foto de perfil del doctor ${datosUsuarioLoggeado.nombremedico}" 
         class="w-25 rounded-circle mt-1 ms-4"> <p class="mt-4 ms-3 fw-bold">${datosUsuarioLoggeado.nombremedico}</p>`;
     }
     // SETEAR PACIENTE
@@ -85,13 +85,13 @@ document.addEventListener("DOMContentLoaded", () => {
     spanIniciarSesion.remove();
     botonRegistro.remove();
     displayAvatar.classList.add("d-flex");
-    botonIniciarSesion.innerHTML += `<a class="nav-link active text-nowrap" aria-current="page" href="./pages/paciente.html" id="aTurnosPaciente">Mis Turnos</a>`;
+    botonIniciarSesion.innerHTML += `<a class="nav-link active text-nowrap" aria-current="page" href="/pages/paciente.html" id="aTurnosPaciente">Mis Turnos</a>`;
     if (datosUsuarioLoggeado.imagenAvatar === "imagenMujer.jpg") {
-      displayAvatar.innerHTML += `<img src="./assets/img/pacienteMujer.jpg" alt="Foto de perfil de la paciente 
+      displayAvatar.innerHTML += `<img src="/assets/img/pacienteMujer.jpg" alt="Foto de perfil de la paciente 
       ${datosUsuarioLoggeado.nombre}" class="w-25 rounded-circle mt-1 ms-4"> <p class="mt-4 ms-3 fw-bold">
       ${datosUsuarioLoggeado.nombre}</p>`;
     } else if (datosUsuarioLoggeado.imagenAvatar === "imagenVaron.jpg") {
-      displayAvatar.innerHTML += `<img src="./assets/img/pacienteHombre.jpg" alt="Foto de perfil del paciente 
+      displayAvatar.innerHTML += `<img src="/assets/img/pacienteHombre.jpg" alt="Foto de perfil del paciente 
         ${datosUsuarioLoggeado.nombre}" class="w-25 rounded-circle mt-1 ms-4"> <p class="mt-4 ms-3 fw-bold">
         ${datosUsuarioLoggeado.nombre}</p>`;
     }
@@ -101,13 +101,13 @@ document.addEventListener("DOMContentLoaded", () => {
     botonRegistro.remove();
     aContacto.remove();
     displayAvatar.classList.add("d-flex");
-    botonContacto.innerHTML += `<a class="nav-link active" aria-current="page" href="./pages/admin.html">Administrar</a>`;
-    botonIniciarSesion.innerHTML += `<a class="nav-link active text-nowrap" aria-current="page" href="./pages/medico.html" id="aTurnosMedico">Mis Turnos</a>`;
+    botonContacto.innerHTML += `<a class="nav-link active" aria-current="page" href="/pages/admin.html">Administrar</a>`;
+    botonIniciarSesion.innerHTML += `<a class="nav-link active text-nowrap" aria-current="page" href="/pages/medico.html" id="aTurnosMedico">Mis Turnos</a>`;
     if (datosUsuarioLoggeado.imagenAvatar === "imagenMujer.jpg") {
-      displayAvatar.innerHTML += `<img src="./assets/img/doc1.jpg" alt="Foto de perfil de la doctora ${datosUsuarioLoggeado.nombreadmin}" 
+      displayAvatar.innerHTML += `<img src="/assets/img/doc1.jpg" alt="Foto de perfil de la doctora ${datosUsuarioLoggeado.nombreadmin}" 
         class="w-25 rounded-circle mt-1 ms-4"> <p class="mt-4 ms-3 fw-bold">${datosUsuarioLoggeado.nombreadmin}</p>`;
     } else if (datosUsuarioLoggeado.imagenAvatar === "imagenVaron.jpg") {
-      displayAvatar.innerHTML += `<img src="./assets/img/doc$.jpg" alt="Foto de perfil del doctor ${datosUsuarioLoggeado.nombreadmin}" 
+      displayAvatar.innerHTML += `<img src="/assets/img/doc$.jpg" alt="Foto de perfil del doctor ${datosUsuarioLoggeado.nombreadmin}" 
           class="w-25 rounded-circle mt-1 ms-4"> <p class="mt-4 ms-3 fw-bold">${datosUsuarioLoggeado.nombreadmin}</p>`;
     }
   }
