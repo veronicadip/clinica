@@ -1,4 +1,4 @@
-// --- FUNCION CERRAR SESION ---
+// --- FUNCION CERRAR SESION  ---
 const cerrarSesionClick = function () {
   localStorage.setItem("usuarioLoggeado", null);
 };
@@ -40,6 +40,7 @@ formModal.addEventListener("submit", (e) => {
     ) {
       localStorage.setItem("usuarioLoggeado", emailIngresado);
       formModal.submit();
+      window.location.href = "/index.html";
     } else {
       alertModal.innerHTML += `<div class="alert alert-danger" role="alert">
       Contraseña incorrecta.
