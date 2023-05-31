@@ -46,43 +46,38 @@
                         </button>
                         <!-- INCIAR SESION -->
                         <button type="button" class="btn btn-dark ms-2 me-2 my-3 hoverBoton text-nowrap" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #383D3B" id="botonIniciarSesion">
-                            Iniciar sesión
+                            <span id="spanIniciarSesion">Iniciar sesión</span> 
                           </button>
                           <!-- MODAL -->
                           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Iniciar sesión</h5>
+                                  <h5 class="modal-title" id="modal-title">Iniciar sesión</h5>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <!-- FORM -->
-                                  <form method="post">
+                                  <form method="post" id="formModal">
                                     <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <label for="emailModal" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="emailModal" aria-describedby="emailHelp" required>
                                       </div>
                                       <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1">
+                                        <label for="contrasenaModal" class="form-label">Contraseña</label>
+                                        <input type="password" class="form-control" id="contrasenaModal" required>
                                         <div id="emailHelp" class="form-text">No vamos a compartir su información con nadie.</div>
-
+                                        <div id="alertModal"></div>
                                       </div>
-                                      
                                       <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btn btn-secondary hoverBoton" data-bs-dismiss="modal" style="background-color: #383D3B">Cancelar</button>
                                         <button type="submit" class="btn btn-primary inciarSesionBoton" style="background-color: #00BCC6; border-color: #02b4bd;">Aceptar</button>
                                       </div>
                                   </form>
                                 </div>
-                                
                               </div>
                             </div>
                           </div>
-                        <!-- <button type="button" class="btn btn-dark ms-2 me-2 my-3 hoverBoton" style="background-color: #383D3B" id="botonIniciarSesion">
-                            <a class="nav-link active text-nowrap" aria-current="page" href="./pages/iniciar-sesion.html" id="aIniciarSesion">Iniciar sesion</a>
-                        </button> -->
                         <div class="dropdown me-3" id="displayAvatar">
                             <button class="btn btn-dark dropdown-toggle ms-2 mt-3 w-100 hoverBoton" type="button" data-bs-toggle="dropdown" aria-expanded="false"
                                 style="background-color: #383D3B" id="botonRegistro">
