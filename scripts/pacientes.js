@@ -64,7 +64,8 @@ const infoLista1 = listaMedicosCGeneral.map((listaMedicoCGeneral) => {
     <li class="list-group-item text-center">
       <img src=${listaMedicoCGeneral.ruta} class="rounded-circle w-25 float-start" />
       ${listaMedicoCGeneral.nombre}
-      <button class="botonColor btn float-md-end" onclick="completarDatosMedicos1('${listaMedicoCGeneral.id}')" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button">Sacar turno</button>
+      <button class="botonColor btn float-md-end" onclick="completarDatosMedicos1('${listaMedicoCGeneral.id}')" 
+      data-bs-toggle="modal" data-bs-target="#exampleModal" role="button">Sacar turno</button>
     </li>
   `;
   return lista1;
@@ -89,12 +90,35 @@ function completarDatosMedicos1(id) {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" id="calendarioFechas">
-        <label for="fecha2">Elige tu fecha</label>
+        <label for="fecha2" class="me-5">Elige tu fecha</label>
         <input type="date" id="fecha2" />
+       <div class="row mt-2">
+        <p class="col-4"> Elige el horario</p>
+        <select class="col-2 h-25 me-2" id="horarios">
+      <option value="10hs">10hs</option>
+      <option value="11hs">11hs</option>
+      <option value="16hs">16hs</option>
+      <option value="19hs">19hs</option>
+    </select>
+    <div>
+   
+<div class="mb-3 w-100">
+  <label for="motivoTurno" class="form-label"
+    >Dejar el motivo de tu turno</label
+  >
+  <textarea
+    class="form-control"
+    id="motivoTurno"
+    rows="3"
+  ></textarea>
+    </div>
+    </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="botonColor btn" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="botonColor btn" id="boton1">Save changes</button>
+        <button type="button" class="botonColor btn" 
+        data-bs-dismiss="modal">Close</button>
+        <button type="button" class="botonColor btn" 
+        data-bs-dismiss="modal" id="boton1">Save changes</button>
       </div>
     `;
 
@@ -106,13 +130,21 @@ function completarDatosMedicos1(id) {
     
     botonFecha.addEventListener('click', () => {
       const fechaCG = fechaInput.valueAsDate;
+      const horarioSelect = document.getElementById("horarios").value;
+      const motivoTextarea = document.getElementById("motivoTurno").value;
+      
       const fechaSeleccionada = {
-        fecha: formatoFecha(fechaCG)
+        nombre:datosPaginaTurnos1.nombre,
+        fecha: formatoFecha(fechaCG),
+        hora:horarioSelect,
+        motivo:motivoTextarea
       };
-      fechasSeleccionadas.push(fechaSeleccionada);
-      document.querySelector("#resultado").textContent = formatoFecha(fechaCG);
+      //fechasSeleccionadas.push(fechaSeleccionada);
+      turnosFechas.push(fechaSeleccionada);
+      return
+      //document.querySelector("#resultado").textContent = formatoFecha(fechaCG);
     });
-    
+    console.log(turnosFechas)
     // Función para formatear la fecha
     function formatoFecha(fechaCG) {
   function rellenar2Digitos(num) {
@@ -130,7 +162,7 @@ function completarDatosMedicos1(id) {
 }
 
 
-console.log(fechasSeleccionadas)
+
 
 //radiologia
   
@@ -390,13 +422,13 @@ let listaMedicosObstetricia =
 
 
 
-//lista de turnos
+//lista de mis turnos
 
-let turnosFechas = [{medico:"lisa thompson",fecha: "10 de mayo", hora: "19hs",id:"lisaID" },
-{medico:"roberto perez",fecha: "12 de mayo",hora: "11hs", id:"robertoID" },
+let turnosFechas = [{medico:"lisa thompson",fecha: "10 de mayo", hora: "19hs",motivo:"lisaID" },
+{medico:"roberto perez",fecha: "12 de mayo",hora: "11hs", motivo:"robertoID" },
 ]
-//let turnoNuevo =  {medico:"Carolina Diaz",fecha: "3 de Junio",hora: "11hs" };
-//turnosFechas.push(turnoNuevo);
+
+
 
 let contenedor = document.getElementById("tablaContainer")
 
@@ -421,6 +453,9 @@ infoTabla.forEach(tabla => { contenedor.appendChild(tabla)
   }
 
 )
+
+//agregar lista turno 
+//turnosFechas.push(fechasSeleccionadas);
 //eliminar lista de turnos
 let botones = document.getElementsByClassName ("botonCancelar");
 for (let i = 0; i < botones.length; i++) {
