@@ -42,12 +42,12 @@ formModal.addEventListener("submit", (e) => {
       formModal.submit();
       window.location.href = "/index.html";
     } else {
-      alertModal.innerHTML += `<div class="alert alert-danger" role="alert">
+      alertModal.innerHTML = `<div class="alert alert-danger" role="alert">
       Contraseña incorrecta.
     </div>`;
     }
   } else {
-    alertModal.innerHTML += `<div class="alert alert-danger" role="alert">
+    alertModal.innerHTML = `<div class="alert alert-danger" role="alert">
    El usuario ingresado no existe.
   </div>`;
   }
