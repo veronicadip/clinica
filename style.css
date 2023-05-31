@@ -5,10 +5,12 @@ body {
 
 /* BOTONES HEADER */
 .hoverBoton:hover {
-    background-color: #434947 !important;
+  background-color: #2a2c2b !important;
+
 }
-.hoverBoton:active {
-    background-color: #202322 !important;
+
+.inciarSesionBoton:hover {
+  background-color: #00aab3 !important;
 }
 
 /* SOBRE NOSOTRAS */
