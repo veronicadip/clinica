@@ -1,3 +1,11 @@
+let ejemplo= JSON.parse(localStorage.getItem("datos"))[localStorage.usuarioLoggeado].nombremedico
+console.log(ejemplo)
+
+
+
+
+
+
 let listaMedicosCardiologos = [
   { nombre: "Lisa Thompson", ruta: "../assets/img/doc1.jpg", id: "1" },
   { nombre: "Roberto Perez", ruta: "../assets/img/doc$.jpg", id: "2" },

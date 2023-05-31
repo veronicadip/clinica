@@ -61,7 +61,9 @@ function almacenarDatos() {
     especialidad: contenedorEspecialidad,
     imagenAvatar: contenedorImagenAvatar,
     recibeOS: contenedorRecibeOS,
+    aprobado: false ,
   };
+ 
   // serializar y guardar la informacion
   localStorage.datos = JSON.stringify(datos);
 
