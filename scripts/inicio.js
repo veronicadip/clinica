@@ -56,6 +56,7 @@ formModal.addEventListener("submit", (e) => {
 // --- NAVBAR DINAMICO ---
 // GET ELEMENT
 const botonIniciarSesion = document.getElementById("botonIniciarSesion");
+const divIniciarSesion = document.getElementById("divIniciarSesion");
 const spanIniciarSesion = document.getElementById("spanIniciarSesion");
 const botonRegistro = document.getElementById("botonRegistro");
 const botonContacto = document.getElementById("botonContacto");
@@ -76,9 +77,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // SETEAR MEDICO
   } else if (datosUsuarioLoggeado.nombremedico !== undefined) {
     spanIniciarSesion.remove();
+    botonIniciarSesion.remove();
     botonRegistro.remove();
     displayAvatar.classList.add("d-flex");
-    botonIniciarSesion.innerHTML += `<a class="nav-link active text-nowrap" aria-current="page" href="/pages/medico.html" id="aTurnosMedico">Mis Turnos</a>`;
+    divIniciarSesion.innerHTML = `<button type="button" class="btn btn-dark ms-2 me-2 my-3 hoverBoton" style="background-color: #383D3B"><a class="nav-link active text-nowrap" aria-current="page" href="/pages/paciente.html" id="aTurnosPaciente">Mis Turnos</a></button>`;
     if (datosUsuarioLoggeado.imagenAvatar === "imagenMujer.jpg") {
       displayAvatar.innerHTML += `<img src="/assets/img/doc1.jpg" alt="Foto de perfil de la doctora ${datosUsuarioLoggeado.nombremedico}" 
       class="w-25 rounded-circle mt-1 ms-4"> <p class="mt-4 ms-3 fw-bold">${datosUsuarioLoggeado.nombremedico}</p>`;
@@ -89,9 +91,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // SETEAR PACIENTE
   } else if (datosUsuarioLoggeado.nombrepaciente !== undefined) {
     spanIniciarSesion.remove();
+    botonIniciarSesion.remove();
     botonRegistro.remove();
     displayAvatar.classList.add("d-flex");
-    botonIniciarSesion.innerHTML += `<a class="nav-link active text-nowrap" aria-current="page" href="/pages/paciente.html" id="aTurnosPaciente">Mis Turnos</a>`;
+    divIniciarSesion.innerHTML += `<button type="button" class="btn btn-dark ms-2 me-2 my-3 hoverBoton" style="background-color: #383D3B"><a class="nav-link active text-nowrap" aria-current="page" href="/pages/paciente.html" id="aTurnosPaciente">Mis Turnos</a></button>`;
     if (datosUsuarioLoggeado.imagenAvatar === "imagenMujer.jpg") {
       displayAvatar.innerHTML += `<img src="/assets/img/pacienteMujer.jpg" alt="Foto de perfil de la paciente 
       ${datosUsuarioLoggeado.nombre}" class="w-25 rounded-circle mt-1 ms-4"> <p class="mt-4 ms-3 fw-bold">
@@ -104,6 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // SETEAR ADMIN
   } else if (datosUsuarioLoggeado.nombreadmin !== undefined) {
     spanIniciarSesion.remove();
+    botonIniciarSesion.remove();
     botonRegistro.remove();
     aContacto.remove();
     displayAvatar.classList.add("d-flex");
@@ -111,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <span>Salir</span>
 </button>`;
     botonContacto.innerHTML += `<a class="nav-link active" aria-current="page" href="/pages/admin.html">Administrar</a>`;
-    botonIniciarSesion.innerHTML += `<a class="nav-link active text-nowrap" aria-current="page" href="/pages/medico.html" id="aTurnosMedico">Mis Turnos</a>`;
+    divIniciarSesion.innerHTML += `<button type="button" class="btn btn-dark ms-2 me-2 my-3 hoverBoton" style="background-color: #383D3B"><a class="nav-link active text-nowrap" aria-current="page" href="/pages/medico.html" id="aTurnosMedico">Mis Turnos</a></button>`;
     if (datosUsuarioLoggeado.imagenAvatar === "imagenMujer.jpg") {
       displayAvatar.innerHTML += `<img src="/assets/img/doc1.jpg" alt="Foto de perfil de la doctora ${datosUsuarioLoggeado.nombreadmin}" 
         class="w-25 rounded-circle mt-1 ms-4"> <p class="mt-4 ms-3 fw-bold">${datosUsuarioLoggeado.nombreadmin}</p>`;
