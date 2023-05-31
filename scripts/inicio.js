@@ -1,3 +1,7 @@
+// --- FUNCION CERRAR SESION ---
+const cerrarSesionClick = function () {
+  localStorage.setItem("usuarioLoggeado", null);
+};
 // --- AGREGAR ADMIN A BASE DE DATOS ---
 if (!localStorage.getItem("datos")) {
   localStorage.setItem("datos", JSON.stringify({}));
@@ -55,6 +59,7 @@ const spanIniciarSesion = document.getElementById("spanIniciarSesion");
 const botonRegistro = document.getElementById("botonRegistro");
 const botonContacto = document.getElementById("botonContacto");
 const aContacto = document.getElementById("aContacto");
+const cerrarSesion = document.getElementById("cerrarSesion");
 const displayAvatar = document.getElementById("displayAvatar");
 let datosUsuarioLoggeado;
 if (localStorage.usuarioLoggeado) {
@@ -101,6 +106,9 @@ document.addEventListener("DOMContentLoaded", () => {
     botonRegistro.remove();
     aContacto.remove();
     displayAvatar.classList.add("d-flex");
+    cerrarSesion.innerHTML += `<button type="button" class="btn btn-dark ms-2 me-2 my-3 hoverBoton" style="background-color: #383D3B" id="botonCerrarSesion">
+    <span>Salir</span>
+</button>`;
     botonContacto.innerHTML += `<a class="nav-link active" aria-current="page" href="/pages/admin.html">Administrar</a>`;
     botonIniciarSesion.innerHTML += `<a class="nav-link active text-nowrap" aria-current="page" href="/pages/medico.html" id="aTurnosMedico">Mis Turnos</a>`;
     if (datosUsuarioLoggeado.imagenAvatar === "imagenMujer.jpg") {
@@ -110,5 +118,16 @@ document.addEventListener("DOMContentLoaded", () => {
       displayAvatar.innerHTML += `<img src="/assets/img/doc$.jpg" alt="Foto de perfil del doctor ${datosUsuarioLoggeado.nombreadmin}" 
           class="w-25 rounded-circle mt-1 ms-4"> <p class="mt-4 ms-3 fw-bold">${datosUsuarioLoggeado.nombreadmin}</p>`;
     }
+  }
+
+  // --- CERRAR SESION ---
+
+  const botonCerrarSesion = document.getElementById("botonCerrarSesion");
+  if (botonCerrarSesion) {
+    botonCerrarSesion.addEventListener("click", (e) => {
+      e.preventDefault();
+      cerrarSesionClick();
+      window.location.href = "/index.html";
+    });
   }
 });
