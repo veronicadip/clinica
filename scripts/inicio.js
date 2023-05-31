@@ -80,6 +80,9 @@ document.addEventListener("DOMContentLoaded", () => {
     botonIniciarSesion.remove();
     botonRegistro.remove();
     displayAvatar.classList.add("d-flex");
+    cerrarSesion.innerHTML += `<button type="button" class="btn btn-dark ms-2 me-2 my-3 hoverBoton" style="background-color: #383D3B" id="botonCerrarSesion">
+    <span>Salir</span>
+</button>`;
     divIniciarSesion.innerHTML = `<button type="button" class="btn btn-dark ms-2 me-2 my-3 hoverBoton" style="background-color: #383D3B"><a class="nav-link active text-nowrap" aria-current="page" href="/pages/paciente.html" id="aTurnosPaciente">Mis Turnos</a></button>`;
     if (datosUsuarioLoggeado.imagenAvatar === "imagenMujer.jpg") {
       displayAvatar.innerHTML += `<img src="/assets/img/doc1.jpg" alt="Foto de perfil de la doctora ${datosUsuarioLoggeado.nombremedico}" 
@@ -94,6 +97,9 @@ document.addEventListener("DOMContentLoaded", () => {
     botonIniciarSesion.remove();
     botonRegistro.remove();
     displayAvatar.classList.add("d-flex");
+    cerrarSesion.innerHTML += `<button type="button" class="btn btn-dark ms-2 me-2 my-3 hoverBoton" style="background-color: #383D3B" id="botonCerrarSesion">
+    <span>Salir</span>
+</button>`;
     divIniciarSesion.innerHTML += `<button type="button" class="btn btn-dark ms-2 me-2 my-3 hoverBoton" style="background-color: #383D3B"><a class="nav-link active text-nowrap" aria-current="page" href="/pages/paciente.html" id="aTurnosPaciente">Mis Turnos</a></button>`;
     if (datosUsuarioLoggeado.imagenAvatar === "imagenMujer.jpg") {
       displayAvatar.innerHTML += `<img src="/assets/img/pacienteMujer.jpg" alt="Foto de perfil de la paciente 
