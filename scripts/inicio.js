@@ -94,13 +94,13 @@ document.addEventListener("DOMContentLoaded", () => {
       displayAvatar.innerHTML += `<img src="./assets/img/pacienteMujer.jpg" alt="Foto de perfil de la paciente 
       ${datosUsuarioLoggeado.nombre}" class="w-25 rounded-circle mt-1 ms-4"> <p class="mt-4 ms-3 fw-bold">
       ${datosUsuarioLoggeado.nombre}</p>`;
-    } else if (datosUsuarioLoggeado.avatar === "imagenVaron.jpg") {
+    } else if (datosUsuarioLoggeado.imagenAvatar === "imagenVaron.jpg") {
       displayAvatar.innerHTML += `<img src="./assets/img/pacienteHombre.jpg" alt="Foto de perfil del paciente 
         ${datosUsuarioLoggeado.nombre}" class="w-25 rounded-circle mt-1 ms-4"> <p class="mt-4 ms-3 fw-bold">
         ${datosUsuarioLoggeado.nombre}</p>`;
     }
     // SETEAR ADMIN
-  } else if (localStordatosUsuarioLoggeadoage.nombreadmin !== undefined) {
+  } else if (datosUsuarioLoggeado.nombreadmin !== undefined) {
     spanIniciarSesion.remove();
     botonRegistro.remove();
     aContacto.remove();
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (datosUsuarioLoggeado.imagenAvatar === "imagenMujer.jpg") {
       displayAvatar.innerHTML += `<img src="./assets/img/doc1.jpg" alt="Foto de perfil de la doctora ${datosUsuarioLoggeado.nombreadmin}" 
         class="w-25 rounded-circle mt-1 ms-4"> <p class="mt-4 ms-3 fw-bold">${datosUsuarioLoggeado.nombreadmin}</p>`;
-    } else if (datosUsuarioLoggeado.avatar === "imagenVaron.jpg") {
+    } else if (datosUsuarioLoggeado.imagenAvatar === "imagenVaron.jpg") {
       displayAvatar.innerHTML += `<img src="./assets/img/doc$.jpg" alt="Foto de perfil del doctor ${datosUsuarioLoggeado.nombreadmin}" 
           class="w-25 rounded-circle mt-1 ms-4"> <p class="mt-4 ms-3 fw-bold">${datosUsuarioLoggeado.nombreadmin}</p>`;
     }
