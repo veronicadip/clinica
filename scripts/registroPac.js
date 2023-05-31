@@ -8,7 +8,7 @@
 //     localStorage.tieneOS = document.querySelector(`input[name="tieneOS"]:checked`).value;
 //     localStorage.cualOS = document.getElementById(`cualOS`).value;
 // }
-// let contenedor1 = 
+// let contenedor1 =
 // localStorage.getItem(`nombrepaciente`);
 
 //  let contenedor2=
@@ -28,14 +28,14 @@
 //  }
 //  console.log(typeof datos);
 
-
-      // define datos
+// define datos
 if (!localStorage.getItem("datos")) {
   localStorage.setItem("datos", JSON.stringify({}));
 }
 
 function guardarDatos() {
-  let contenedornombrePaciente = document.getElementById(`nombrepaciente`).value;
+  let contenedornombrePaciente =
+    document.getElementById(`nombrepaciente`).value;
   let contenedorEmail = document.getElementById(`email`).value;
   let contenedorTelefono = document.getElementById(`telefono`).value;
   let contenedorContrasena = document.getElementById(`contrasena`).value;
@@ -44,7 +44,7 @@ function guardarDatos() {
     `input[name="tieneOS"]:checked`
   ).value;
   let contenedorCualOS = document.getElementById(`cualOS`).value;
- 
+
   // deserializar la informacion
   const datos = JSON.parse(localStorage.datos);
   // manipular la informacion

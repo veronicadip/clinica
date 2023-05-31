@@ -10,7 +10,7 @@
 //     localStorage.recibeOS = document.querySelector(`input[name="recibeOS"]:checked`).value;
 // }
 
-//  let contenedor1 = 
+//  let contenedor1 =
 // localStorage.getItem(`nombremedico`);
 
 //  let contenedor2=
@@ -29,7 +29,6 @@
 //        imagen:  ` ${contenedor4}`,
 //       }
 //       console.log(typeof datos);
-
 
 // define datos
 if (!localStorage.getItem("datos")) {
