@@ -44,7 +44,7 @@ function almacenarDatos(e) {
   alert("Excelente, te has regitrado con exito!!");
 
 
-  const datosRegistro = document.getElementById('datosRegistrosMedicos');
+  /*const datosRegistro = document.getElementById('datosRegistrosMedicos');
   
  let listaPaciente = document.createElement("div");
 const contenidoCard =  `
@@ -63,11 +63,11 @@ const contenidoCard =  `
         </div>
       </div>
 `;
-datosRegistro.innerHTML = contenidoCard;
+datosRegistro.innerHTML = contenidoCard;*/
 
   // te manda al inicio una vez que llenas el formulario
 
-  //window.location.href = "../index.html";
+  window.location.href = "../index.html";
 }
 
 
