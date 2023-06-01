@@ -152,8 +152,8 @@ const infoLista1 = listaMedicosCGeneral.map((listaMedicoCGeneral) => {
     <li class="list-group-item text-center">
       <img src=${listaMedicoCGeneral.ruta} class="rounded-circle w-25 float-start" />
       ${listaMedicoCGeneral.nombre}
-      <button class="botonColor btn float-md-end" onclick="completarDatosMedicos1('${listaMedicoCGeneral.id}')" 
-      data-bs-toggle="modal" data-bs-target="#exampleModal" role="button">Sacar turno</button>
+      <a class="botonColor btn float-md-end" onclick="completarDatosMedicos1('${listaMedicoCGeneral.id}')" 
+      href="../pages/enProgreso.html role="button">Sacar turno</a>
     </li>
   `;
   return lista1;
@@ -163,93 +163,6 @@ infoLista1.forEach((lista1) => {
   contenedorNombre1.appendChild(lista1);
 });
 
-/*let datosPaginaTurnos1;
-let fechasSeleccionadas = [];
-function completarDatosMedicos1(id) {
-  datosPaginaTurnos1 = listaMedicosCGeneral.find((nombre) => nombre.id === id);
-
-  const contenedorNombreTurnos1 = document.getElementById("modalCgeneral");
-
-  if (datosPaginaTurnos1) {
-    const articuloTurnos1 = document.createElement("div");
-    articuloTurnos1.innerHTML = `
-      <div class="modal-header">
-        <h1 class="modal-title fs-3" id="exampleModalLabel">${datosPaginaTurnos1.nombre}</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body" id="calendarioFechas">
-        <label for="fecha2" class="me-5">Elige tu fecha</label>
-        <input type="date" id="fecha2" />
-       <div class="row mt-2">
-        <p class="col-4"> Elige el horario</p>
-        <select class="col-2 h-25 me-2" id="horarios">
-      <option value="10hs">10hs</option>
-      <option value="11hs">11hs</option>
-      <option value="16hs">16hs</option>
-      <option value="19hs">19hs</option>
-    </select>
-    <div>
-   
-<div class="mb-3 w-100">
-  <label for="motivoTurno" class="form-label"
-    >Dejar el motivo de tu turno</label
-  >
-  <textarea
-    class="form-control"
-    id="motivoTurno"
-    rows="3"
-  ></textarea>
-    </div>
-    </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="botonColor btn" 
-        data-bs-dismiss="modal">Close</button>
-        <button type="button" class="botonColor btn" 
-        data-bs-dismiss="modal" id="boton1">Save changes</button>
-      </div>
-    `;
-
-    contenedorNombreTurnos1.appendChild(articuloTurnos1);
-    
-    // Evento click del botón dentro de completarDatosMedicos1
-    let botonFecha = articuloTurnos1.querySelector("#boton1");
-    let fechaInput = articuloTurnos1.querySelector("#fecha2");
-    
-    botonFecha.addEventListener('click', () => {
-      const fechaCG = fechaInput.valueAsDate;
-      const horarioSelect = document.getElementById("horarios").value;
-      const motivoTextarea = document.getElementById("motivoTurno").value;
-      
-      const fechaSeleccionada = {
-        nombre:datosPaginaTurnos1.nombre,
-        fecha: formatoFecha(fechaCG),
-        hora:horarioSelect,
-        motivo:motivoTextarea
-      };
-      //fechasSeleccionadas.push(fechaSeleccionada);
-      turnosFechas.push(fechaSeleccionada);
-      return
-      //document.querySelector("#resultado").textContent = formatoFecha(fechaCG);
-    });
-    console.log(turnosFechas)
-    // Función para formatear la fecha
-    function formatoFecha(fechaCG) {
-  function rellenar2Digitos(num) {
-    return num.toString().padStart(2, '0');
-  }
-
-  const año = fechaCG.getFullYear();
-  const mes = rellenar2Digitos(fechaCG.getMonth() + 1);
-  const día = rellenar2Digitos(fechaCG.getDate());
-
-  return `${día}/${mes}/${año}`;
-}
-
-  }
-}
-
-*/
 
 
 //radiologia
@@ -277,13 +190,12 @@ let listaMedicosRadiologia =
     
     ${listaMedicoRadiologia.nombre}
   
-    <button
+    <a
       class="botonColor btn float-md-end"
       onclick="completarDatosMedicos2()"
-      data-bs-toggle="modal" 
-      data-bs-target="#staticBackdrop"
+      
       role="button"
-      >Sacar turno</button
+      >Sacar turno</a
     >
   </li>
   
@@ -543,6 +455,7 @@ for (let i = 0; i < botones.length; i++) {
     this.parentNode.remove();
   });
 }
+
 
 // Agregar nuevo turno a la lista
 const fechaSeleccionadaGuardada = localStorage.getItem('fechaSeleccionada');
