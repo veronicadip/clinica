@@ -55,7 +55,7 @@ h3{
     margin-left: 2vw;
      width: 25vw; 
 }
-label{
+.label-input{
     font-weight: bold;
     background: linear-gradient(rgb(13, 121, 82),rgb(120, 142, 193));
     -webkit-background-clip: text;
@@ -118,7 +118,7 @@ footer{
     text-decoration: none;
 }
 /*MEDIA QUERY*/
-@media(max-width: 1024px){
+@media (max-width: 1024px){
     .padreCol{
         display: flex;
         width: auto;
@@ -128,7 +128,7 @@ footer{
         width: 65vw;
         margin-left: 6vw;
     }
-    label{
+    .label-input{
         font-size: 3.5vw;
     }
     .imagen{
@@ -151,3 +151,9 @@ footer{
         justify-content: center !important;
     }
 }
+
+
+/* MODAL */
+.modal-backdrop {
+    display: none;
+  }
