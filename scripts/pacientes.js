@@ -558,4 +558,5 @@ if (fechaSeleccionadaGuardada) {
 
   // Guardar turnos actualizados en el localStorage
   localStorage.setItem('turnosFechas', JSON.stringify(turnosFechas));
+  location.reload();
 }
