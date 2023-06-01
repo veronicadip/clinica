@@ -24,11 +24,11 @@
                 <img src="./assets/logo/logo.png" alt="Logo de la clínica" height="60" width="60" class="ms-2">
             </a>
             <!-- BOTON TOGGLER -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- HEADER OFFCANVAS -->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+            <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                 <div class="d-flex offCanvasStyles">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
@@ -47,7 +47,7 @@
                     </button>
                     <!-- INCIAR SESION -->
                     <div id="divIniciarSesion" style="display: contents;">
-                        <button type="button" class="btn btn-dark ms-2 me-2 my-3 hoverBoton text-nowrap" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #383D3B" id="botonIniciarSesion">
+                        <button type="button" class="btn btn-dark ms-2 me-2 my-3 hoverBoton text-nowrap" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #383D3B" id="botonIniciarSesion" >
                             <span id="spanIniciarSesion">Iniciar sesión</span> 
                           </button>
                     </div>
