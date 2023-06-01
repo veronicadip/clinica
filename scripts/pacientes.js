@@ -512,33 +512,38 @@ let listaMedicosObstetricia =
 
 //lista de mis turnos
 
+let turnosFechas = []
 
-function actualizarTabla() {
-  // Obtener la referencia al contenedor de la tabla
-  let contenedor = document.getElementById("tablaContainer");
 
-  // Limpiar el contenido existente dentro del contenedor
-  contenedor.innerHTML = "";
-
-  // Crear y agregar las filas de la tabla basadas en los turnosFechas
-  turnosFechas.forEach((turnoFecha) => {
-    let tabla = document.createElement("tr");
-    tabla.innerHTML = `
-      <td class="table-primary ps-3">${turnoFecha.medico}</td>
-      <td class="table-primary">${turnoFecha.fecha}-${turnoFecha.hora}</td>
-      <button class="botonCancelar btn float-end mt-2 me-2">cancelar</button>
-    `;
-    contenedor.appendChild(tabla);
-  });
-
-  // Agregar evento a los botones de cancelar turno
-  let botones = document.getElementsByClassName("botonCancelar");
-  for (let i = 0; i < botones.length; i++) {
-    botones[i].addEventListener("click", function () {
-      this.parentNode.remove();
-    });
-  }
+const turnosFechasGuardados = localStorage.getItem('turnosFechas');
+if (turnosFechasGuardados) {
+  turnosFechas = JSON.parse(turnosFechasGuardados);
 }
+
+let contenedor = document.getElementById("tablaContainer");
+
+const infoTabla = turnosFechas.map((turnoFecha) => {
+  let tabla = document.createElement("tr");
+  tabla.innerHTML = `
+    <td class="table-primary ps-3">${turnoFecha.medico}</td>
+    <td class="table-primary">${turnoFecha.fecha}-${turnoFecha.hora}</td>
+    <button class="botonCancelar btn float-end mt-2 me-2">cancelar</button>
+  `;
+  return tabla;
+});
+
+infoTabla.forEach((tabla) => {
+  contenedor.appendChild(tabla);
+});
+
+// Agregar evento a los botones de cancelar turno
+let botones = document.getElementsByClassName("botonCancelar");
+for (let i = 0; i < botones.length; i++) {
+  botones[i].addEventListener("click", function () {
+    this.parentNode.remove();
+  });
+}
+
 // Agregar nuevo turno a la lista
 const fechaSeleccionadaGuardada = localStorage.getItem('fechaSeleccionada');
 if (fechaSeleccionadaGuardada) {
@@ -553,7 +558,5 @@ if (fechaSeleccionadaGuardada) {
 
   // Guardar turnos actualizados en el localStorage
   localStorage.setItem('turnosFechas', JSON.stringify(turnosFechas));
-
-  // Actualizar la tabla sin recargar la página
-  actualizarTabla();
+  
 }
