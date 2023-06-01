@@ -35,7 +35,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <!-- BUSCADOR -->
-                    <div class="container-fluid w-75">
+                    <div class="container-fluid">
                         <form class="d-flex" role="search" id="formBuscador" action="./pages/enProgreso.html">
                             <input class="form-control my-3" type="search" placeholder="Buscar" aria-label="Search" id="buscador">
                         </form>
@@ -46,9 +46,12 @@
                         <a class="nav-link active" aria-current="page" href="./pages/contacto.html" id="aContacto">Contacto</a>
                     </button>
                     <!-- INCIAR SESION -->
-                    <button type="button" class="btn btn-dark ms-2 me-2 my-3 hoverBoton text-nowrap" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #383D3B" id="botonIniciarSesion">
-                        <span id="spanIniciarSesion">Iniciar sesión</span> 
-                      </button>
+                    <div id="divIniciarSesion" style="display: contents;">
+                        <button type="button" class="btn btn-dark ms-2 me-2 my-3 hoverBoton text-nowrap" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #383D3B" id="botonIniciarSesion">
+                            <span id="spanIniciarSesion">Iniciar sesión</span> 
+                          </button>
+                    </div>
+                    
                       <!-- MODAL -->
                       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
