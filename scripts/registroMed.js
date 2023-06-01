@@ -3,7 +3,13 @@ if (!localStorage.getItem("datos")) {
   localStorage.setItem("datos", JSON.stringify({}));
 }
 
-function almacenarDatos() {
+const formMedico = document.getElementById("formMedico");
+formMedico.addEventListener("submit", (e) => {
+  e.preventDefault();
+  almacenarDatos();
+});
+
+function almacenarDatos(e) {
   let contenedorNombre = document.getElementById(`nombremedico`).value;
   let contenedorEmail = document.getElementById(`email`).value;
   let contenedorIDMedico = document.getElementById(`idmedico`).value;
@@ -28,15 +34,40 @@ function almacenarDatos() {
     especialidad: contenedorEspecialidad,
     imagenAvatar: contenedorImagenAvatar,
     recibeOS: contenedorRecibeOS,
+    aprobado: false ,
   };
+ 
   // serializar y guardar la informacion
   localStorage.datos = JSON.stringify(datos);
-  
+
   // alert exitoso
   alert("Excelente, te has regitrado con exito!!");
 
-  // te manda al inicio una vez que llenas el formulario
-  window.location.href = "../index.html";
 
+  /*const datosRegistro = document.getElementById('datosRegistrosMedicos');
   
+ let listaPaciente = document.createElement("div");
+const contenidoCard =  `
+        <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">${contenedorNombre}</h5>
+          <ul class="card-text list-group list-group-flush">
+           <li class="list-group-item">Mail: ${contenedorEmail}</li>
+           <li class="list-group-item">Numero: ${contenedorTelefono}</li>
+           <li class="list-group-item">Especialida: ${contenedorEspecialidad}</li>
+           <li class="list-group-item">Obra Social: ${contenedorRecibeOS}</li>
+           <li class="list-group-item"></li>
+          </ul>
+          
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+`;
+datosRegistro.innerHTML = contenidoCard;*/
+
+  // te manda al inicio una vez que llenas el formulario
+
+  window.location.href = "../index.html";
 }
+
+

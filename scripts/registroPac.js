@@ -3,6 +3,12 @@ if (!localStorage.getItem("datos")) {
   localStorage.setItem("datos", JSON.stringify({}));
 }
 
+const formPacientes = document.getElementById("formPacientes");
+formPacientes.addEventListener("submit", (e) => {
+  e.preventDefault();
+  guardarDatos();
+});
+
 function guardarDatos() {
   let contenedornombrePaciente =
     document.getElementById(`nombrepaciente`).value;
@@ -32,8 +38,7 @@ function guardarDatos() {
 
   // alert exitoso
   alert("Excelente, te has regitrado con exito!!");
-  
+
   // te manda al inicio una vez que llenas el formulario
   window.location.href = "../index.html";
-
 }
