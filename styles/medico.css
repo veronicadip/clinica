@@ -75,12 +75,18 @@ footer{
           justify-content: center !important;
       };
   };
-  .NombreMedico{
+  /*.NombreMedico{
     margin-left: 25rem !important; 
+<<<<<<< HEAD
+  }*/
+  .nombrePaciente{
+
+=======
   }
 
 
 /* MODAL */
 .modal-backdrop {
     display: none;
+>>>>>>> 5bd2eac022895cca8eea8fb716173b8ceea6e9fd
   }

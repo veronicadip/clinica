@@ -12,6 +12,12 @@ contenedor[i].innerHTML=turno;
 }*/
 /*let listaFechasTurnos = [
     {
+<<<<<<< HEAD
+      nombrePaciente: "Julia Domínguez",
+      fechaPaciente: "1 de junio",
+      horaPaciente: "10hs",
+      motivoPaciente: "Arritmia"
+=======
       nombrePaciente: "julia dominguez",
       fechaPaciente: "1 de junio",
       horaPaciente: "10hs",
@@ -22,6 +28,7 @@ contenedor[i].innerHTML=turno;
       fechaPaciente: "2 de junio",
       horaPaciente: "11hs",
       motivoPaciente: "by pass "
+>>>>>>> 5bd2eac022895cca8eea8fb716173b8ceea6e9fd
     }
   ];
   
@@ -59,6 +66,38 @@ contenedor[i].innerHTML=turno;
     });
   });
   
+<<<<<<< HEAD
+
+  let nuevoArreglo = [
+    {
+      nombrePaciente: "Juan Pérez",
+      fechaPaciente: "2 de junio",
+      horaPaciente: "11hs",
+      motivoPaciente: "dolor de cabeza"
+    },
+    {
+      nombrePaciente: "María López",
+      fechaPaciente: "3 de junio",
+      horaPaciente: "12hs",
+      motivoPaciente: "consulta general"
+    }
+  ];
+
+  listaFechasTurnos = listaFechasTurnos.concat(nuevoArreglo);
+  document.addEventListener("DOMContentLoaded", function() {
+  let contenedorNombrePaciente = document.getElementById("turnoPaciente");
+
+  const infoPaciente = listaFechasTurnos.map((listafechaturno) => {
+    // Código existente
+  });
+
+  infoPaciente.forEach((listaPaciente) => {
+    contenedorNombrePaciente.appendChild(listaPaciente);
+  });
+});
+
+=======
 */
   
   
+>>>>>>> 5bd2eac022895cca8eea8fb716173b8ceea6e9fd
