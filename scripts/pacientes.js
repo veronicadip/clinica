@@ -511,61 +511,11 @@ let listaMedicosObstetricia =
 
 
 //lista de mis turnos
-
-/*let turnosFechas = [{medico:"lisa thompson",fecha: "10 de mayo", hora: "19hs",motivo:"lisaID" },
+let turnosFechas = [];
+turnosFechas = [{medico:"lisa thompson",fecha: "10 de mayo", hora: "19hs",motivo:"lisaID" },
 {medico:"roberto perez",fecha: "12 de mayo",hora: "11hs", motivo:"robertoID" },
 ]
 
-
-
-let contenedor = document.getElementById("tablaContainer")
-
-const infoTabla = turnosFechas.map((turnoFecha)=>{
-
-  let tabla= document.createElement("tr")
-  tabla.innerHTML= `
-  
-  <td class="table-primary ps-3">${turnoFecha.medico}</td>
-  <td class="table-primary ">${turnoFecha.fecha}-${turnoFecha.hora}</td>
-  
-  <button class="botonCancelar btn  float-end mt-2 me-2"  >cancelar</button
-    >
-  
-
-`;
-return tabla
-}
-);
-
-infoTabla.forEach(tabla => { contenedor.appendChild(tabla)
-  }
-
-)
-
-//agregar lista turno 
-//turnosFechas.push(fechasSeleccionadas);
-//eliminar lista de turnos
-let botones = document.getElementsByClassName ("botonCancelar");
-for (let i = 0; i < botones.length; i++) {
-  botones[i].addEventListener('click', function() {
-    this.parentNode.remove();
-  });
-}
-
-const fechaSeleccionadaGuardada = localStorage.getItem('fechaSeleccionada');
-if (fechaSeleccionadaGuardada) {
-  const fechaSeleccionada = JSON.parse(fechaSeleccionadaGuardada);
-  const nuevoTurno = {
-    nombre: fechaSeleccionada.nombre,
-    fecha: fechaSeleccionada.fecha,
-    hora: fechaSeleccionada.hora,
-    motivo: fechaSeleccionada.motivo
-  };
-  turnosFechas.push(nuevoTurno)
-  
-}*/
-
-let turnosFechas = [];
 
 const turnosFechasGuardados = localStorage.getItem('turnosFechas');
 if (turnosFechasGuardados) {
