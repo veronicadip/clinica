@@ -10,12 +10,18 @@ for (let i= 0; i < contenedor.length; i++) {
 console.log(contenedor[i]);
 contenedor[i].innerHTML=turno;
 }*/
-let listaFechasTurnos = [
+/*let listaFechasTurnos = [
     {
       nombrePaciente: "julia dominguez",
       fechaPaciente: "1 de junio",
       horaPaciente: "10hs",
       motivoPaciente: "arritmia"
+    },
+    {
+      nombrePaciente: "maria perez",
+      fechaPaciente: "2 de junio",
+      horaPaciente: "11hs",
+      motivoPaciente: "by pass "
     }
   ];
   
@@ -53,6 +59,6 @@ let listaFechasTurnos = [
     });
   });
   
-
+*/
   
   

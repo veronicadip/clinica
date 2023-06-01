@@ -78,3 +78,9 @@ footer{
   .NombreMedico{
     margin-left: 25rem !important; 
   }
+
+
+/* MODAL */
+.modal-backdrop {
+    display: none;
+  }
