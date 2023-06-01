@@ -31,12 +31,10 @@ function almacenarDatos() {
   };
   // serializar y guardar la informacion
   localStorage.datos = JSON.stringify(datos);
-  
+
   // alert exitoso
   alert("Excelente, te has regitrado con exito!!");
 
   // te manda al inicio una vez que llenas el formulario
-  window.location.href = "../index.html";
-
-  
+  window.location.href = "/index.html";
 }
