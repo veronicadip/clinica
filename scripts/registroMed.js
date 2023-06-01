@@ -3,7 +3,13 @@ if (!localStorage.getItem("datos")) {
   localStorage.setItem("datos", JSON.stringify({}));
 }
 
-function almacenarDatos() {
+const formMedico = document.getElementById("formMedico");
+formMedico.addEventListener("submit", (e) => {
+  e.preventDefault();
+  almacenarDatos();
+});
+
+function almacenarDatos(e) {
   let contenedorNombre = document.getElementById(`nombremedico`).value;
   let contenedorEmail = document.getElementById(`email`).value;
   let contenedorIDMedico = document.getElementById(`idmedico`).value;
@@ -36,5 +42,5 @@ function almacenarDatos() {
   alert("Excelente, te has regitrado con exito!!");
 
   // te manda al inicio una vez que llenas el formulario
-  window.location.href = "/index.html";
+  window.location.href = "../index.html";
 }
