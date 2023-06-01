@@ -61,7 +61,7 @@ h3{
     width: 25vw;
    
 }
-label{
+.label-input{
     font-weight: bold;
     font-size: 1.5vw;
     background: linear-gradient(rgb(13, 121, 82),rgb(120, 142, 193));
@@ -85,6 +85,7 @@ input:hover{
 .buscador:hover{
     background-color: white;
 }
+
 /*IMAGEN*/
 .fotoform{
     margin-top: 5vw;
@@ -144,7 +145,7 @@ footer{
         width: 65vw;
         margin-left: 6vw;
     }
-    label{
+    .label-input{
         font-size: 3.5vw;
     }
     .imagen{
