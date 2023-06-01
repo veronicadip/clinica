@@ -1,16 +1,4 @@
 
-<<<<<<< HEAD
-let contenedor =document.querySelectorAll("[id='turnoPaciente']");
-
-for (let i= 0; i < contenedor.length; i++) {
-console.log(contenedor[i]);
-contenedor[i].innerHTML=turno;
-}*/
-
-
-
-=======
->>>>>>> 0ca3c5a432ffb3d1ab2f7e4ff86ac60ee28ed156
 let listaFechasTurnos = [
     {
       nombrePaciente: "julia dominguez",
