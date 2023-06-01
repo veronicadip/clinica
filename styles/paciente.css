@@ -145,9 +145,3 @@ footer{
         justify-content: center !important;
     };
 };
-
-
-/* MODAL */
-.modal-backdrop {
-    display: none;
-  }

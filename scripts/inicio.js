@@ -28,30 +28,31 @@ const formModal = document.getElementById("formModal");
 const alertModal = document.getElementById("alertModal");
 let emailIngresado;
 let contrasenaIngresada;
-
-formModal.addEventListener("submit", (e) => {
-  e.preventDefault();
-  emailIngresado = e.currentTarget[0].value;
-  contrasenaIngresada = e.currentTarget[1].value;
-  if (emailIngresado in JSON.parse(localStorage.datos)) {
-    if (
-      contrasenaIngresada ===
-      JSON.parse(localStorage.getItem("datos"))[emailIngresado].contrasena
-    ) {
-      localStorage.setItem("usuarioLoggeado", emailIngresado);
-      formModal.submit();
-      window.location.href = "/index.html";
+if (formModal) {
+  formModal.addEventListener("submit", (e) => {
+    e.preventDefault();
+    emailIngresado = e.currentTarget[0].value;
+    contrasenaIngresada = e.currentTarget[1].value;
+    if (emailIngresado in JSON.parse(localStorage.datos)) {
+      if (
+        contrasenaIngresada ===
+        JSON.parse(localStorage.getItem("datos"))[emailIngresado].contrasena
+      ) {
+        localStorage.setItem("usuarioLoggeado", emailIngresado);
+        formModal.submit();
+        window.location.href = "/index.html";
+      } else {
+        alertModal.innerHTML = `<div class="alert alert-danger" role="alert">
+        Contraseña incorrecta.
+      </div>`;
+      }
     } else {
       alertModal.innerHTML = `<div class="alert alert-danger" role="alert">
-      Contraseña incorrecta.
+     El usuario ingresado no existe.
     </div>`;
     }
-  } else {
-    alertModal.innerHTML = `<div class="alert alert-danger" role="alert">
-   El usuario ingresado no existe.
-  </div>`;
-  }
-});
+  });
+}
 
 // --- NAVBAR DINAMICO ---
 // GET ELEMENT
@@ -72,7 +73,7 @@ if (localStorage.usuarioLoggeado) {
 
 document.addEventListener("DOMContentLoaded", () => {
   // SETEAR USUARIO NO LOGGEADO
-  if (!localStorage.usuarioLoggeado) {
+  if (!datosUsuarioLoggeado) {
     return;
     // SETEAR MEDICO
   } else if (datosUsuarioLoggeado.nombremedico !== undefined) {
