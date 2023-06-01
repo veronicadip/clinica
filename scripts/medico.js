@@ -10,6 +10,9 @@ for (let i= 0; i < contenedor.length; i++) {
 console.log(contenedor[i]);
 contenedor[i].innerHTML=turno;
 }*/
+
+
+
 let listaFechasTurnos = [
     {
       nombrePaciente: "julia dominguez",
@@ -20,7 +23,8 @@ let listaFechasTurnos = [
     
   ];
   
-  
+  document.addEventListener("DOMContentLoaded", function () {
+
     let contenedorNombrePaciente = document.getElementById("turnoPaciente");
   
     const infoPaciente = listaFechasTurnos.map((listafechaturno) => {
@@ -37,6 +41,7 @@ let listaFechasTurnos = [
     infoPaciente.forEach((listaPaciente) => {
       contenedorNombrePaciente.appendChild(listaPaciente);
     });
+  });
 
     let listaFechasTurnos2 = [
       {
@@ -48,7 +53,8 @@ let listaFechasTurnos = [
       
     ];
     
-    
+    document.addEventListener("DOMContentLoaded", function () {
+
       let contenedorNombrePaciente2 = document.getElementById("turnoPaciente2");
     
       const infoPaciente2 = listaFechasTurnos.map((listafechaturno2) => {
@@ -66,7 +72,7 @@ let listaFechasTurnos = [
         contenedorNombrePaciente2.appendChild(listaPaciente2);
       });
   
-    
+    });
   
     
       let listaFechasTurnos3 = [
@@ -79,7 +85,8 @@ let listaFechasTurnos = [
         
       ];
       
-      
+      document.addEventListener("DOMContentLoaded", function () {
+
         let contenedorNombrePaciente3 = document.getElementById("turnoPaciente3");
       
         const infoPaciente3 = listaFechasTurnos3.map((listafechaturno3) => {
@@ -97,7 +104,7 @@ let listaFechasTurnos = [
           contenedorNombrePaciente3.appendChild(listaPaciente3);
         });
     
-      
+       } );      
     
       
         
