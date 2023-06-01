@@ -9,7 +9,7 @@ let listaFechasTurnos = [
     
   ];
   
-  document.addEventListener("DOMContentLoaded", function () {
+  
 
     let contenedorNombrePaciente = document.getElementById("turnoPaciente");
   
@@ -27,7 +27,7 @@ let listaFechasTurnos = [
     infoPaciente.forEach((listaPaciente) => {
       contenedorNombrePaciente.appendChild(listaPaciente);
     });
-  });
+
 
     let listaFechasTurnos2 = [
       {
@@ -39,7 +39,7 @@ let listaFechasTurnos = [
       
     ];
     
-    document.addEventListener("DOMContentLoaded", function () {
+    
 
       let contenedorNombrePaciente2 = document.getElementById("turnoPaciente2");
     
@@ -58,7 +58,7 @@ let listaFechasTurnos = [
         contenedorNombrePaciente2.appendChild(listaPaciente2);
       });
   
-    });
+    
   
     
       let listaFechasTurnos3 = [
@@ -71,7 +71,7 @@ let listaFechasTurnos = [
         
       ];
       
-      document.addEventListener("DOMContentLoaded", function () {
+    
 
         let contenedorNombrePaciente3 = document.getElementById("turnoPaciente3");
       
@@ -90,7 +90,7 @@ let listaFechasTurnos = [
           contenedorNombrePaciente3.appendChild(listaPaciente3);
         });
     
-       } );      
+          
     
       
         
