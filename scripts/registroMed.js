@@ -3,13 +3,7 @@ if (!localStorage.getItem("datos")) {
   localStorage.setItem("datos", JSON.stringify({}));
 }
 
-const formMedico = document.getElementById("formMedico");
-formMedico.addEventListener("submit", (e) => {
-  e.preventDefault();
-  almacenarDatos();
-});
-
-function almacenarDatos(e) {
+function almacenarDatos() {
   let contenedorNombre = document.getElementById(`nombremedico`).value;
   let contenedorEmail = document.getElementById(`email`).value;
   let contenedorIDMedico = document.getElementById(`idmedico`).value;
@@ -34,11 +28,15 @@ function almacenarDatos(e) {
     especialidad: contenedorEspecialidad,
     imagenAvatar: contenedorImagenAvatar,
     recibeOS: contenedorRecibeOS,
-    aprobado: false ,
   };
- 
   // serializar y guardar la informacion
   localStorage.datos = JSON.stringify(datos);
-
+  
   // alert exitoso
   alert("Excelente, te has regitrado con exito!!");
+
+  // te manda al inicio una vez que llenas el formulario
+  window.location.href = "../index.html";
+
+  
+}
