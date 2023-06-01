@@ -1,11 +1,4 @@
-let ejemplo= JSON.parse(localStorage.getItem("datos"))[localStorage.usuarioLoggeado].nombremedico
-console.log(ejemplo)
-
-
-
-
-
-
+//algo asi como esto
 let listaMedicosCardiologos = [
   { nombre: "Lisa Thompson", ruta: "../assets/img/doc1.jpg", id: "1" },
   { nombre: "Roberto Perez", ruta: "../assets/img/doc$.jpg", id: "2" },
@@ -13,17 +6,18 @@ let listaMedicosCardiologos = [
 ];
 
 let contenedorNombre = document.getElementById("nombreMedicosCardio");
-//data-bs-toggle="modal" data-bs-target="#exampleModal"
+
 const infoLista = listaMedicosCardiologos.map((listaMedicosCardiologo) => {
   let lista = document.createElement("li");
   lista.innerHTML = `
     <li class="list-group-item text-center">
       <img src=${listaMedicosCardiologo.ruta} class="rounded-circle w-25 float-start" />
       ${listaMedicosCardiologo.nombre}
-      <a class="botonColor btn float-md-end"
+      <button class="botonColor btn float-md-end"
         onclick="completarDatosMedicos('${listaMedicosCardiologo.id}')"
-        href="./turnos.html"
-        role="button">Sacar turno</a>
+        data-bs-toggle="modal" 
+        data-bs-target="#exampleModal"
+        role="button">Sacar turno</button>
     </li>
   `;
   return lista;
@@ -33,7 +27,7 @@ infoLista.forEach((lista) => {
   contenedorNombre.appendChild(lista);
 });
 
-let datosPaginaTurnos;
+/*let datosPaginaTurnos;
 
 function completarDatosMedicos(id) {
   datosPaginaTurnos = listaMedicosCardiologos.find((nombre) => nombre.id === id);
@@ -56,9 +50,95 @@ function completarDatosMedicos(id) {
   
   return articuloTurnos  
 
+}*/
+let datosPaginaTurnosCardio;
+let fechasSeleccionadasCardio = [];
+function completarDatosMedicos(id) {
+  datosPaginaTurnosCardio = listaMedicosCardiologos.find((nombre) => nombre.id === id);
+
+  const contenedorNombreTurnosCardio = document.getElementById("modalCgeneral");
+
+  if (datosPaginaTurnosCardio) {
+    const articuloTurnosCardio = document.createElement("div");
+    articuloTurnosCardio.innerHTML = `
+      <div class="modal-header">
+        <h1 class="modal-title fs-3" id="exampleModalLabel">${datosPaginaTurnosCardio.nombre}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="calendarioFechas">
+        <label for="fecha2" class="me-5">Elige tu fecha</label>
+        <input type="date" id="fecha2" />
+       <div class="row mt-2">
+        <p class="col-4"> Elige el horario</p>
+        <select class="col-2 h-25 me-2" id="horarios">
+      <option value="10hs">10hs</option>
+      <option value="11hs">11hs</option>
+      <option value="16hs">16hs</option>
+      <option value="19hs">19hs</option>
+    </select>
+    <div>
+   
+<div class="mb-3 w-100">
+  <label for="motivoTurno" class="form-label"
+    >Dejar el motivo de tu turno</label
+  >
+  <textarea
+    class="form-control"
+    id="motivoTurno"
+    rows="3"
+  ></textarea>
+    </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="botonColor btn" 
+        data-bs-dismiss="modal">Close</button>
+        <button type="button" class="botonColor btn" 
+        data-bs-dismiss="modal" id="boton1">Save changes</button>
+      </div>
+    `;
+
+    contenedorNombreTurnosCardio.appendChild(articuloTurnosCardio);
+    
+    // Evento click del botón dentro de completarDatosMedicos1
+    let botonFecha = articuloTurnosCardio.querySelector("#boton1");
+    let fechaInput = articuloTurnosCardio.querySelector("#fecha2");
+    
+    botonFecha.addEventListener('click', () => {
+      const fechaCG = fechaInput.valueAsDate;
+      const horarioSelect = document.getElementById("horarios").value;
+      const motivoTextarea = document.getElementById("motivoTurno").value;
+      
+      const fechaSeleccionada = {
+        nombre:datosPaginaTurnosCardio.nombre,
+        fecha: formatoFecha(fechaCG),
+        hora:horarioSelect,
+        motivo:motivoTextarea
+      };
+     //guardar en el local storage
+      localStorage.setItem('fechaSeleccionada', JSON.stringify(fechaSeleccionada));
+      //document.querySelector("#resultado").textContent = formatoFecha(fechaCG);
+    });
+   
+    // Función para formatear la fecha
+    function formatoFecha(fechaCG) {
+  function rellenar2Digitos(num) {
+    return num.toString().padStart(2, '0');
+  }
+
+  const año = fechaCG.getFullYear();
+  const mes = rellenar2Digitos(fechaCG.getMonth() + 1);
+  const día = rellenar2Digitos(fechaCG.getDate());
+
+  return `${día}/${mes}/${año}`;
 }
 
+  }
+}
+
+
 //cirujanos general
+
 let listaMedicosCGeneral = [
   { nombre: "Maria Gomez", ruta: "../assets/img/doc1.jpg", id: "4" },
   { nombre: "Humberto Gomez", ruta: "../assets/img/doc$.jpg", id: "5" },
@@ -83,7 +163,7 @@ infoLista1.forEach((lista1) => {
   contenedorNombre1.appendChild(lista1);
 });
 
-let datosPaginaTurnos1;
+/*let datosPaginaTurnos1;
 let fechasSeleccionadas = [];
 function completarDatosMedicos1(id) {
   datosPaginaTurnos1 = listaMedicosCGeneral.find((nombre) => nombre.id === id);
@@ -169,7 +249,7 @@ function completarDatosMedicos1(id) {
   }
 }
 
-
+*/
 
 
 //radiologia
@@ -470,4 +550,17 @@ for (let i = 0; i < botones.length; i++) {
   botones[i].addEventListener('click', function() {
     this.parentNode.remove();
   });
+}
+
+const fechaSeleccionadaGuardada = localStorage.getItem('fechaSeleccionada');
+if (fechaSeleccionadaGuardada) {
+  const fechaSeleccionada = JSON.parse(fechaSeleccionadaGuardada);
+  const nuevoTurno = {
+    nombre: fechaSeleccionada.nombre,
+    fecha: fechaSeleccionada.fecha,
+    hora: fechaSeleccionada.hora,
+    motivo: fechaSeleccionada.motivo
+  };
+  turnosFechas.push(nuevoTurno)
+  
 }
