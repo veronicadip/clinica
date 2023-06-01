@@ -46,28 +46,28 @@ function almacenarDatos(e) {
 
   /*const datosRegistro = document.getElementById('datosRegistrosMedicos');
   
- let listaPaciente = document.createElement("div");
-const contenidoCard =  `
-        <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">${contenedorNombre}</h5>
-          <ul class="card-text list-group list-group-flush">
-           <li class="list-group-item">Mail: ${contenedorEmail}</li>
-           <li class="list-group-item">Numero: ${contenedorTelefono}</li>
-           <li class="list-group-item">Especialida: ${contenedorEspecialidad}</li>
-           <li class="list-group-item">Obra Social: ${contenedorRecibeOS}</li>
-           <li class="list-group-item"></li>
-          </ul>
+//  let listaPaciente = document.createElement("div");
+// const contenidoCard =  `
+//         <div class="card" style="width: 18rem;">
+//         <div class="card-body">
+//           <h5 class="card-title">${contenedorNombre}</h5>
+//           <ul class="card-text list-group list-group-flush">
+//            <li class="list-group-item">Mail: ${contenedorEmail}</li>
+//            <li class="list-group-item">Numero: ${contenedorTelefono}</li>
+//            <li class="list-group-item">Especialida: ${contenedorEspecialidad}</li>
+//            <li class="list-group-item">Obra Social: ${contenedorRecibeOS}</li>
+//            <li class="list-group-item"></li>
+//           </ul>
           
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-`;
-datosRegistro.innerHTML = contenidoCard;*/
+//           <a href="#" class="btn btn-primary">Go somewhere</a>
+//         </div>
+//       </div>
+// `;
+// datosRegistro.innerHTML = contenidoCard;*/
 
-  // te manda al inicio una vez que llenas el formulario
+//   // te manda al inicio una vez que llenas el formulario
 
-  window.location.href = "../index.html";
-}
+//   window.location.href = "../index.html";
+// }
 
 
