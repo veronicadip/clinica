@@ -549,7 +549,7 @@ const fechaSeleccionadaGuardada = localStorage.getItem('fechaSeleccionada');
 if (fechaSeleccionadaGuardada) {
   const fechaSeleccionada = JSON.parse(fechaSeleccionadaGuardada);
   const nuevoTurno = {
-    medico: fechaSeleccionada.medico,
+    medico: fechaSeleccionada.nombre,
     fecha: fechaSeleccionada.fecha,
     hora: fechaSeleccionada.hora,
     motivo: fechaSeleccionada.motivo
