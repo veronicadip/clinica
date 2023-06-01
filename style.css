@@ -3,12 +3,18 @@ body {
     background-image: radial-gradient(circle, #f2f6f7, #eaedee, #e2e5e5, #dadcdd, #d2d4d4, #c5cfd0, #b8cbcb, #aac6c7, #92c4c6, #76c1c6, #52bfc6, #00bcc6) !important;
 }
 
+.modal-backdrop {
+  display: none;
+}
+
 /* BOTONES HEADER */
 .hoverBoton:hover {
-    background-color: #434947 !important;
+  background-color: #2a2c2b !important;
+
 }
-.hoverBoton:active {
-    background-color: #202322 !important;
+
+.inciarSesionBoton:hover {
+  background-color: #00aab3 !important;
 }
 
 /* SOBRE NOSOTRAS */
@@ -138,6 +144,13 @@ footer{
 }
 
 /* MEDIA QUERY */
+@media screen and (max-width: 460px) {
+  .box {
+     margin-left: 0% !important;
+     margin-right: 0% !important;
+   }
+ }
+
 @media (max-width: 600px) {
   .container .box:hover .contenido {
     transform: translate(0, 3.5rem);
@@ -158,3 +171,4 @@ footer{
         justify-content: center !important;
     };
 };
+

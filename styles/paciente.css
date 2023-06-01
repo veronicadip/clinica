@@ -1,6 +1,9 @@
 body { background: radial-gradient(circle, #f2f6f7, #eaedee, #e2e5e5, #dadcdd, #d2d4d4, #c5cfd0, #b8cbcb, #aac6c7, #92c4c6, #76c1c6, #52bfc6, #00bcc6);}
 nav {background-color: #127078;}
-footer {background-color: #127078;}
+.fondoModalColor{
+    background-color:  #383d3bf4 ;
+    color: white;
+}
 
 nav button {background-color: #383d3b;}
 
@@ -12,6 +15,29 @@ nav button {background-color: #383d3b;}
     background-color:#03545c  ;
     color: white;
 }
+
+li {
+    list-style-type: none;
+    border: none;
+    height: 105px;  }
+  
+tr:nth-child(odd) {
+    background-color:rgba(56, 61, 59, 0.696); 
+    height: 50px;
+    
+    }
+  
+  tr:nth-child(even) {
+    background-color: #12707852 ; 
+    height: 50px;
+
+  }
+  
+ .botonCancelar { background-color:#127078;
+    border: none; 
+    color: white;}
+
+.botonCancelar:hover{background-color:#127078;}    
 
 .horario{
     background-color:#127078; 
@@ -26,6 +52,8 @@ nav button {background-color: #383d3b;}
     margin-left:10px ;
     box-shadow: 2px 2px 4px #f2f6f7;
 }
+
+
 @media screen and (min-width: 768px) {
     .horario {
         width: 130px;
@@ -51,3 +79,69 @@ nav button {background-color: #383d3b;}
         background-color:#03545c ;
     }
 }
+@media screen and (max-width: 667px) {
+    .botonColor {
+        margin-left: 10px;
+    }
+}
+footer{
+    background-color: black;
+    min-height: 10px;
+}
+.footer-logo{
+    height: 60px;
+    width: 350px;
+    margin:30px;
+}
+.iconos-redes-sociales a{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+    margin: 20px;
+    border:2px solid white;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+}
+.iconos-redes-sociales i{
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+}
+.iconos-redes-sociales a:hover {
+    background-color: white;
+    border: 2px solid cyan;
+}
+
+.iconos-redes-sociales a:hover i{
+    color: black;
+}
+.derechos-de-autor{
+    font-size: 15px;
+    color:white;
+    text-decoration: none;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 600px) {
+  .container .box:hover .contenido {
+    transform: translate(0, 3.5rem);
+  }
+  .container .box:hover .imgBox {
+    transform: translate(0, -3.5rem);
+  }
+}
+
+@media screen and (max-width: 991px) {
+    .dropdownStyles {
+        margin-left: 0.5rem !important;
+        margin-top: 0.5rem !important;
+    }
+    .offCanvasStyles {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center !important;
+    };
+};
