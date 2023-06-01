@@ -62,7 +62,7 @@ function completarDatosMedicos(id) {
     const articuloTurnosCardio = document.createElement("div");
     articuloTurnosCardio.innerHTML = `
       <div class="modal-header">
-        <h1 class="modal-title fs-3" id="exampleModalLabel">${datosPaginaTurnosCardio.nombre}</h1>
+        <h1 class="modal-title fs-3" id="ModalLabelCardio">${datosPaginaTurnosCardio.nombre}</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" id="calendarioFechas">
@@ -543,15 +543,6 @@ infoTabla.forEach(tabla => { contenedor.appendChild(tabla)
 )
 
 //agregar lista turno 
-//turnosFechas.push(fechasSeleccionadas);
-//eliminar lista de turnos
-let botones = document.getElementsByClassName ("botonCancelar");
-for (let i = 0; i < botones.length; i++) {
-  botones[i].addEventListener('click', function() {
-    this.parentNode.remove();
-  });
-}
-
 const fechaSeleccionadaGuardada = localStorage.getItem('fechaSeleccionada');
 if (fechaSeleccionadaGuardada) {
   const fechaSeleccionada = JSON.parse(fechaSeleccionadaGuardada);
@@ -564,3 +555,12 @@ if (fechaSeleccionadaGuardada) {
   turnosFechas.push(nuevoTurno)
   
 }
+//turnosFechas.push(fechasSeleccionadas);
+//eliminar lista de turnos
+let botones = document.getElementsByClassName ("botonCancelar");
+for (let i = 0; i < botones.length; i++) {
+  botones[i].addEventListener('click', function() {
+    this.parentNode.remove();
+  });
+}
+
