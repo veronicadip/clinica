@@ -511,8 +511,8 @@ let listaMedicosObstetricia =
 
 
 //lista de mis turnos
-let turnosFechas = [];
-turnosFechas = [{medico:"lisa thompson",fecha: "10 de mayo", hora: "19hs",motivo:"lisaID" },
+
+let turnosFechas = [{medico:"lisa thompson",fecha: "10 de mayo", hora: "19hs",motivo:"lisaID" },
 {medico:"roberto perez",fecha: "12 de mayo",hora: "11hs", motivo:"robertoID" },
 ]
 
