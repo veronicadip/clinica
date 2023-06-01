@@ -14,10 +14,10 @@ contenedor[i].innerHTML=turno;
 
   let listaFechasTurnos = [
     {
-      nombrePaciente: "julia domínguez",
+      nombrePaciente: "Julia Domínguez",
       fechaPaciente: "1 de junio",
       horaPaciente: "10hs",
-      motivoPaciente: "arritmia"
+      motivoPaciente: "Arritmia"
     }
   ];
   
@@ -56,4 +56,31 @@ contenedor[i].innerHTML=turno;
   });
   
 
-  
+  let nuevoArreglo = [
+    {
+      nombrePaciente: "Juan Pérez",
+      fechaPaciente: "2 de junio",
+      horaPaciente: "11hs",
+      motivoPaciente: "dolor de cabeza"
+    },
+    {
+      nombrePaciente: "María López",
+      fechaPaciente: "3 de junio",
+      horaPaciente: "12hs",
+      motivoPaciente: "consulta general"
+    }
+  ];
+
+  listaFechasTurnos = listaFechasTurnos.concat(nuevoArreglo);
+  document.addEventListener("DOMContentLoaded", function() {
+  let contenedorNombrePaciente = document.getElementById("turnoPaciente");
+
+  const infoPaciente = listaFechasTurnos.map((listafechaturno) => {
+    // Código existente
+  });
+
+  infoPaciente.forEach((listaPaciente) => {
+    contenedorNombrePaciente.appendChild(listaPaciente);
+  });
+});
+
