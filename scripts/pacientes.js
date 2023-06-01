@@ -512,9 +512,7 @@ let listaMedicosObstetricia =
 
 //lista de mis turnos
 
-let turnosFechas = [{medico:"lisa thompson",fecha: "10 de mayo", hora: "19hs",motivo:"lisaID" },
-{medico:"roberto perez",fecha: "12 de mayo",hora: "11hs", motivo:"robertoID" },
-]
+let turnosFechas = []
 
 
 const turnosFechasGuardados = localStorage.getItem('turnosFechas');
