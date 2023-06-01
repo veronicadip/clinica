@@ -52,3 +52,23 @@ footer{
 .modal-backdrop {
     display: none;
   }
+
+/* BOTONES HEADER */
+.hoverBoton:hover {
+    background-color: #2a2c2b !important;
+}
+.inciarSesionBoton:hover {
+    background-color: #00aab3 !important;
+  }
+/* MEDIA QUERY NAVBAR */
+@media screen and (max-width: 991px) {
+    .dropdownStyles {
+        margin-left: 0.5rem !important;
+        margin-top: 0.5rem !important;
+    }
+    .offCanvasStyles {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center !important;
+    };
+};
