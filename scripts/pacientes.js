@@ -512,7 +512,7 @@ let listaMedicosObstetricia =
 
 //lista de mis turnos
 
-let turnosFechas = [{medico:"lisa thompson",fecha: "10 de mayo", hora: "19hs",motivo:"lisaID" },
+/*let turnosFechas = [{medico:"lisa thompson",fecha: "10 de mayo", hora: "19hs",motivo:"lisaID" },
 {medico:"roberto perez",fecha: "12 de mayo",hora: "11hs", motivo:"robertoID" },
 ]
 
@@ -553,14 +553,4 @@ if (fechaSeleccionadaGuardada) {
     motivo: fechaSeleccionada.motivo
   };
   turnosFechas.push(nuevoTurno)
-  
-}
-//turnosFechas.push(fechasSeleccionadas);
-//eliminar lista de turnos
-let botones = document.getElementsByClassName ("botonCancelar");
-for (let i = 0; i < botones.length; i++) {
-  botones[i].addEventListener('click', function() {
-    this.parentNode.remove();
-  });
-}
 
